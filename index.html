@@ -1,0 +1,3610 @@
+<!doctype html>
+
+<html class="scroll-smooth" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>
+      The People Behind Our Progress | SYB.Sc.IT Teachers' Day Tribute
+    </title>
+    <!-- Google Fonts & Material Symbols -->
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Newsreader:ital,opsz,wght@0,6..72,400;1,6..72,400;1,6..72,600&amp;family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#9b3e33",
+              "primary-container": "#bb5649",
+              "on-primary": "#ffffff",
+              "on-primary-container": "#fffbff",
+              "primary-fixed": "#ffdad5",
+              "primary-fixed-dim": "#ffb4a9",
+              secondary: "#43617f",
+              "secondary-container": "#bbdafd",
+              "on-secondary": "#ffffff",
+              "on-secondary-container": "#42607e",
+              "secondary-fixed": "#cfe5ff",
+              "secondary-fixed-dim": "#abcaec",
+              tertiary: "#755b02",
+              "tertiary-container": "#caa84f",
+              "on-tertiary": "#ffffff",
+              "on-tertiary-container": "#503d00",
+              "tertiary-fixed": "#ffdf93",
+              "tertiary-fixed-dim": "#e6c367",
+              background: "#fef8f3",
+              surface: "#fef8f3",
+              "surface-dim": "#ded9d4",
+              "surface-bright": "#fef8f3",
+              "surface-container-lowest": "#ffffff",
+              "surface-container-low": "#f8f3ee",
+              "surface-container": "#f3ede8",
+              "surface-container-high": "#ede7e2",
+              "surface-container-highest": "#e7e1dd",
+              "on-surface": "#1d1b19",
+              "on-surface-variant": "#56423f",
+              outline: "#89726e",
+              "outline-variant": "#dcc0bc",
+              "inverse-surface": "#32302d",
+              "inverse-on-surface": "#f5f0eb",
+              error: "#ba1a1a",
+            },
+            fontFamily: {
+              "display-hero": ["Playfair Display", "serif"],
+              "headline-lg": ["Playfair Display", "serif"],
+              "headline-md": ["Playfair Display", "serif"],
+              "headline-sm": ["Playfair Display", "serif"],
+              "annotation-script": ["Newsreader", "serif"],
+              "body-lg": ["Inter", "sans-serif"],
+              "body-md": ["Inter", "sans-serif"],
+              "body-sm": ["Inter", "sans-serif"],
+              "label-caps": ["Inter", "sans-serif"],
+              mono: ["JetBrains Mono", "monospace"],
+            },
+            spacing: {
+              "margin-mobile": "1.25rem",
+              "margin-desktop": "3rem",
+              "space-xs": "0.5rem",
+              "space-sm": "0.75rem",
+              "space-md": "1rem",
+              "space-lg": "1.5rem",
+              "space-xl": "2rem",
+              "space-2xl": "3rem",
+              "space-3xl": "4.5rem",
+              "space-4xl": "6rem",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      /* Custom 3D & Animation utilities */
+      :root {
+        --ease-paper: cubic-bezier(0.22, 1, 0.36, 1);
+      }
+
+      .perspective-1000 {
+        perspective: 1000px;
+        -webkit-perspective: 1000px;
+      }
+
+      .transform-style-3d {
+        transform-style: preserve-3d;
+        -webkit-transform-style: preserve-3d;
+      }
+
+      .backface-hidden {
+        backface-visibility: hidden;
+        -webkit-backface-visibility: hidden;
+        transform: translate3d(0, 0, 0);
+      }
+
+      .rotate-y-180 {
+        transform: rotateY(180deg) !important;
+      }
+
+      /* Scroll-triggered reveal system */
+      .reveal-on-scroll {
+        opacity: 0;
+        transform: translateY(22px);
+        transition:
+          opacity 0.75s var(--ease-paper),
+          transform 0.75s var(--ease-paper);
+      }
+
+      .reveal-on-scroll.is-revealed {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      .reveal-delay-1 {
+        transition-delay: 80ms;
+      }
+
+      .reveal-delay-2 {
+        transition-delay: 160ms;
+      }
+
+      .reveal-delay-3 {
+        transition-delay: 240ms;
+      }
+
+      .reveal-delay-4 {
+        transition-delay: 320ms;
+      }
+
+      /* Polaroid scattered angles & responsive lift */
+      .polaroid-card-wrap {
+        position: relative;
+        z-index: 1;
+        transition:
+          transform 250ms cubic-bezier(0.16, 1, 0.3, 1),
+          z-index 0s ease 0s;
+        will-change: transform;
+      }
+
+      .polaroid-card-wrap:hover,
+      .polaroid-card-wrap:focus-within,
+      .polaroid-card-wrap.is-flipped-active {
+        z-index: 35;
+      }
+
+      @media (min-width: 1200px) {
+        .polaroid-card-wrap:nth-child(1) {
+          transform: rotate(-1.4deg);
+        }
+
+        .polaroid-card-wrap:nth-child(2) {
+          transform: rotate(1.6deg);
+        }
+
+        .polaroid-card-wrap:nth-child(3) {
+          transform: rotate(-0.9deg);
+        }
+
+        .polaroid-card-wrap:nth-child(4) {
+          transform: rotate(1.8deg);
+        }
+
+        .polaroid-card-wrap:nth-child(5) {
+          transform: rotate(1.1deg);
+        }
+
+        .polaroid-card-wrap:nth-child(6) {
+          transform: rotate(-1.5deg);
+        }
+
+        .polaroid-card-wrap:nth-child(7) {
+          transform: rotate(1.3deg);
+        }
+
+        .polaroid-card-wrap:nth-child(8) {
+          transform: rotate(-1.2deg);
+        }
+
+        .polaroid-card-wrap:hover,
+        .polaroid-card-wrap:focus-within {
+          transform: translateY(-8px) rotate(0deg) scale(1.02);
+        }
+      }
+
+      @media (min-width: 768px) and (max-width: 1199px) {
+        .polaroid-card-wrap:nth-child(1) {
+          transform: rotate(-0.6deg);
+        }
+
+        .polaroid-card-wrap:nth-child(2) {
+          transform: rotate(0.6deg);
+        }
+
+        .polaroid-card-wrap:nth-child(3) {
+          transform: rotate(-0.4deg);
+        }
+
+        .polaroid-card-wrap:nth-child(4) {
+          transform: rotate(0.6deg);
+        }
+
+        .polaroid-card-wrap:nth-child(5) {
+          transform: rotate(0.5deg);
+        }
+
+        .polaroid-card-wrap:nth-child(6) {
+          transform: rotate(-0.5deg);
+        }
+
+        .polaroid-card-wrap:nth-child(7) {
+          transform: rotate(0.5deg);
+        }
+
+        .polaroid-card-wrap:nth-child(8) {
+          transform: rotate(-0.5deg);
+        }
+
+        .polaroid-card-wrap:hover,
+        .polaroid-card-wrap:focus-within {
+          transform: translateY(-6px) rotate(0deg) scale(1.015);
+        }
+      }
+
+      @media (max-width: 767px) {
+        .polaroid-card-wrap {
+          transform: none !important;
+        }
+
+        .polaroid-card-wrap:hover,
+        .polaroid-card-wrap:focus-within {
+          transform: translateY(-3px) scale(1.01) !important;
+        }
+      }
+
+      .teacher-polaroid-flipper {
+        transition: transform 650ms var(--ease-paper);
+      }
+
+      .teacher-polaroid {
+        transition:
+          box-shadow 250ms cubic-bezier(0.16, 1, 0.3, 1),
+          border-color 250ms ease;
+        will-change: transform;
+      }
+
+      .teacher-polaroid:hover {
+        box-shadow:
+          0 16px 36px -6px rgba(0, 0, 0, 0.12),
+          0 8px 16px -6px rgba(0, 0, 0, 0.06);
+      }
+
+      /* Simulation screen box hover micro-lift (butter-smooth GPU accelerated) */
+      .teacher-polaroid .h-52 {
+        transition:
+          transform 250ms cubic-bezier(0.16, 1, 0.3, 1),
+          box-shadow 250ms cubic-bezier(0.16, 1, 0.3, 1),
+          border-color 250ms ease;
+        will-change: transform;
+      }
+
+      .teacher-polaroid:hover .h-52 {
+        transform: translateY(-2px);
+      }
+
+      svg circle {
+        transform-box: fill-box;
+        transform-origin: center;
+      }
+
+      /* Micro-animations */
+      .trendline-path {
+        stroke-dasharray: 200;
+        stroke-dashoffset: 0;
+        transition: stroke 0.4s ease;
+      }
+
+      .group:hover .trendline-path,
+      .group:active .trendline-path {
+        animation: drawTrendline 0.85s var(--ease-paper) forwards;
+      }
+
+      @keyframes drawTrendline {
+        from {
+          stroke-dashoffset: 200;
+        }
+
+        to {
+          stroke-dashoffset: 0;
+        }
+      }
+
+      @keyframes floatGentle {
+        0%,
+        100% {
+          transform: translateY(0px) rotate(0deg);
+        }
+
+        50% {
+          transform: translateY(-8px) rotate(2deg);
+        }
+      }
+
+      @keyframes floatReverse {
+        0%,
+        100% {
+          transform: translateY(0px) rotate(0deg);
+        }
+
+        50% {
+          transform: translateY(8px) rotate(-2deg);
+        }
+      }
+
+      @keyframes drawStroke {
+        to {
+          stroke-dashoffset: 0;
+        }
+      }
+
+      @keyframes pulseSoft {
+        0%,
+        100% {
+          opacity: 0.7;
+          transform: scale(1);
+        }
+
+        50% {
+          opacity: 1;
+          transform: scale(1.04);
+        }
+      }
+
+      .animate-float-1 {
+        animation: floatGentle 5s var(--ease-paper) infinite;
+      }
+
+      .animate-float-2 {
+        animation: floatReverse 6s var(--ease-paper) infinite;
+      }
+
+      .animate-float-3 {
+        animation: floatGentle 7s var(--ease-paper) infinite;
+      }
+
+      .ink-path {
+        stroke-dasharray: 280;
+        stroke-dashoffset: 280;
+        animation: drawStroke 1.6s var(--ease-paper) forwards 0.8s;
+      }
+
+      .ink-path-people {
+        stroke-dasharray: 280;
+        stroke-dashoffset: 280;
+        animation: drawStroke 1.6s var(--ease-paper) forwards 1.2s;
+      }
+
+      /* Soundwave animation for Lofi Tape - GPU accelerated scaleY */
+      .sound-bar {
+        width: 3px;
+        height: 16px;
+        background-color: currentColor;
+        border-radius: 2px;
+        transform-origin: bottom;
+        animation: bounceWave 0.8s infinite var(--ease-paper) alternate;
+      }
+
+      @keyframes bounceWave {
+        from {
+          transform: scaleY(0.2);
+        }
+
+        to {
+          transform: scaleY(1);
+        }
+      }
+
+      .sound-bar:nth-child(2) {
+        animation-delay: 0.2s;
+      }
+
+      .sound-bar:nth-child(3) {
+        animation-delay: 0.4s;
+      }
+
+      /* Soft image / element fade-in */
+      .fade-in-ready {
+        opacity: 0;
+        transition: opacity 0.5s var(--ease-paper);
+      }
+
+      .fade-in-ready.is-loaded {
+        opacity: 1;
+      }
+
+      /* Prefers Reduced Motion Fallback */
+      @media (prefers-reduced-motion: reduce) {
+        *,
+        ::before,
+        ::after {
+          animation-duration: 0.001ms !important;
+          animation-iteration-count: 1 !important;
+          transition-duration: 0.001ms !important;
+          scroll-behavior: auto !important;
+        }
+
+        .reveal-on-scroll {
+          opacity: 1 !important;
+          transform: none !important;
+        }
+
+        .animate-float-1,
+        .animate-float-2,
+        .animate-float-3,
+        .sound-bar,
+        .ink-path,
+        .ink-path-people {
+          animation: none !important;
+          stroke-dashoffset: 0 !important;
+        }
+
+        .polaroid-card-wrap {
+          transform: none !important;
+        }
+      }
+    </style>
+  </head>
+
+  <body
+    class="bg-background font-body-md text-on-surface antialiased selection:bg-primary-fixed selection:text-primary"
+  >
+    <!-- ========================================================================= -->
+    <!-- HEADER & READING PROGRESS BAR -->
+    <!-- ========================================================================= -->
+    <header
+      class="fixed top-0 left-0 right-0 w-full z-50 bg-background/90 backdrop-blur-md shadow-[0_1px_8px_rgba(43,41,38,0.05)] transition-all"
+    >
+      <div
+        class="w-full h-16 max-w-[1240px] mx-auto px-margin-mobile lg:px-margin-desktop flex items-center justify-between"
+      >
+        <div class="flex items-center gap-space-md">
+          <a class="flex flex-col group" href="#letter-scroll">
+            <span
+              class="font-label-caps text-[11px] uppercase text-primary tracking-widest font-semibold group-hover:underline"
+              >SYB.Sc.IT • 2026–2027</span
+            >
+            <span
+              class="font-headline-sm text-lg md:text-xl text-on-surface font-semibold"
+              >The People Behind Our Progress</span
+            >
+          </a>
+        </div>
+        <nav
+          class="hidden md:flex items-center gap-1.5 p-1 bg-surface-container-low rounded-xl border border-surface-container"
+        >
+          <a
+            class="px-3 py-1.5 text-xs font-semibold rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all"
+            href="#letter-scroll"
+            >The Collective Letter</a
+          >
+          <a
+            class="px-3 py-1.5 text-xs font-semibold rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all"
+            href="#roster-section"
+            >Timetable Story</a
+          >
+          <a
+            class="px-3 py-1.5 text-xs font-semibold rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all"
+            href="#mentors-roster"
+            >Mentors &amp; Guides</a
+          >
+          <a
+            class="px-3 py-1.5 text-xs font-semibold rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all"
+            href="#memory-board"
+            >Sticky Notes</a
+          >
+          <a
+            class="px-3 py-1.5 text-xs font-semibold rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all"
+            href="#slate-dedication"
+            >Epilogue</a
+          >
+        </nav>
+        <div class="flex items-center gap-2 sm:gap-3">
+          <!-- Lofi Tape Button -->
+          <button
+            aria-label="Toggle Ambient Lofi Audio"
+            class="flex items-center gap-2 px-3 py-1.5 rounded-full bg-surface-container-low border border-surface-container text-on-surface-variant hover:text-primary transition-all text-xs font-semibold"
+            id="lofi-toggle-btn"
+            onclick="toggleLofiAudio()"
+          >
+            <div
+              class="flex items-center justify-center"
+              id="lofi-icon-container"
+            >
+              <span class="material-symbols-outlined text-base">volume_up</span>
+            </div>
+            <div
+              class="hidden items-end h-4 gap-0.5 text-primary"
+              id="soundwave"
+            >
+              <span class="sound-bar"></span>
+              <span class="sound-bar"></span>
+              <span class="sound-bar"></span>
+            </div>
+            <span
+              class="hidden sm:inline font-mono text-[11px] uppercase tracking-wider"
+              id="lofi-status-label"
+              >Lofi Tape</span
+            >
+          </button>
+          <a
+            class="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-on-primary hover:opacity-90 transition-opacity"
+            href="#slate-dedication"
+            title="SYB.Sc.IT Cohort"
+          >
+            <span class="material-symbols-outlined text-[17px]">favorite</span>
+          </a>
+        </div>
+      </div>
+      <!-- Scroll Progress Line -->
+      <div class="w-full h-0.5 bg-surface-container-high">
+        <div
+          aria-valuemax="100"
+          aria-valuemin="0"
+          aria-valuenow="0"
+          class="h-full bg-primary w-0 transition-all duration-150"
+          id="scroll-progress-bar"
+          role="progressbar"
+        ></div>
+      </div>
+    </header>
+    <main class="w-full pt-16 bg-background overflow-hidden">
+      <!-- ========================================================================= -->
+      <!-- 1. HERO — OPENING THE NOTEBOOK (Kinetic Text + Floating Doodles) -->
+      <!-- ========================================================================= -->
+      <section
+        class="relative w-full min-h-[92vh] flex flex-col items-center justify-center px-margin-mobile lg:px-margin-desktop py-space-3xl overflow-hidden bg-surface"
+        id="letter-scroll"
+      >
+        <!-- Notebook Ruled Canvas Lines -->
+        <div
+          class="absolute inset-0 pointer-events-none opacity-20"
+          style="
+            background-image: repeating-linear-gradient(
+              to bottom,
+              transparent,
+              transparent 31px,
+              rgba(92, 122, 153, 0.4) 31px,
+              rgba(92, 122, 153, 0.4) 32px
+            );
+            background-size: 100% 32px;
+          "
+        ></div>
+        <!-- Red Margin Ruled Line -->
+        <div
+          class="absolute left-6 lg:left-24 top-0 bottom-0 w-0.5 bg-primary/20 pointer-events-none"
+        ></div>
+        <!-- Drifting academic doodles & parallax IT particles -->
+        <div
+          class="absolute top-16 left-12 lg:left-36 text-secondary/35 text-5xl font-mono select-none animate-float-1 pointer-events-none"
+        >
+          {   }
+        </div>
+        <div
+          class="absolute top-28 right-12 lg:right-40 text-primary/35 text-6xl font-serif select-none animate-float-2 pointer-events-none"
+        >
+          ∑
+        </div>
+        <div
+          class="absolute bottom-28 left-8 lg:left-32 text-tertiary/50 select-none hidden sm:block animate-float-3 pointer-events-none"
+        >
+          <svg
+            class="opacity-70"
+            fill="none"
+            height="42"
+            viewbox="0 0 74 42"
+            width="74"
+          >
+            <path
+              d="M4 36C15 36 12 10 28 10C42 10 38 34 52 34C62 34 68 20 70 8"
+              stroke="currentColor"
+              stroke-dasharray="3 3"
+              stroke-linecap="round"
+              stroke-width="2.5"
+            ></path>
+            <circle cx="70" cy="8" fill="currentColor" r="3.5"></circle>
+          </svg>
+          <span
+            class="font-mono text-[9px] uppercase tracking-widest block mt-1 text-tertiary font-bold"
+            >py_snake.node</span
+          >
+        </div>
+        <div
+          class="absolute bottom-36 right-12 lg:right-36 text-secondary/50 select-none hidden sm:flex items-center gap-1.5 animate-float-1 pointer-events-none"
+        >
+          <span
+            class="px-2 py-0.5 bg-surface-container rounded text-xs font-mono border border-surface-container-high"
+            >HEAD</span
+          >
+          <span class="text-primary font-bold">→</span>
+          <span
+            class="px-2 py-0.5 bg-surface-container rounded text-xs font-mono border border-surface-container-high"
+            >NEXT*</span
+          >
+        </div>
+        <!-- Main Letter Content -->
+        <div
+          class="max-w-[880px] w-full mx-auto relative z-10 text-center flex flex-col items-center"
+        >
+          <!-- Washi Tape Pin Accent -->
+          <div
+            class="w-32 h-6 bg-tertiary-container/30 border border-tertiary/20 -rotate-2 rounded-xs shadow-xs mb-6 flex items-center justify-center"
+          >
+            <span
+              class="font-mono text-[10px] text-on-tertiary-container uppercase tracking-widest font-bold"
+              >TRIBUTE VOL. II • 2026–27</span
+            >
+          </div>
+          <!-- Animated SVG stroke flourishes -->
+          <svg
+            class="w-48 h-6 mb-3 text-primary/60"
+            fill="none"
+            viewbox="0 0 200 20"
+          >
+            <path
+              d="M5 15 C 50 2, 150 20, 195 5"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+            ></path>
+          </svg>
+          <!-- Step-building Typographic Headline with animated underlines -->
+          <div class="flex flex-col gap-2 text-on-surface">
+            <span
+              class="font-headline-md lg:text-4xl text-on-surface-variant italic font-normal tracking-wide transition-all duration-700"
+            >
+              Before we learned
+            </span>
+            <span
+              class="font-display-hero text-4xl sm:text-5xl lg:text-6xl text-primary tracking-tight font-serif font-bold relative inline-block mx-auto py-1"
+            >
+              the subject,
+              <!-- Drawn ink highlight -->
+              <svg
+                class="absolute -bottom-2 left-0 w-full h-3 text-tertiary-container/90 overflow-visible"
+                fill="none"
+                preserveaspectratio="none"
+                viewbox="0 0 260 12"
+              >
+                <path
+                  class="ink-path"
+                  d="M2 9 C 70 2, 190 2, 258 8"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-width="4"
+                ></path>
+              </svg>
+            </span>
+            <span
+              class="font-display-hero text-3xl sm:text-4xl lg:text-5xl text-on-surface font-semibold mt-2 relative inline-block"
+            >
+              we learned from people.
+              <svg
+                class="absolute -bottom-2 left-0 w-full h-3 text-primary/40 overflow-visible"
+                fill="none"
+                preserveaspectratio="none"
+                viewbox="0 0 260 12"
+              >
+                <path
+                  class="ink-path-people"
+                  d="M3 8 C 80 12, 180 3, 257 6"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-width="3"
+                ></path>
+              </svg>
+            </span>
+          </div>
+          <!-- Typewriter Chronicle Subtitle -->
+          <div
+            class="mt-space-lg min-h-[3.5rem] flex items-center justify-center"
+          >
+            <p
+              class="font-annotation-script text-xl sm:text-2xl lg:text-3xl text-on-surface-variant leading-relaxed inline"
+            >
+              <span
+                class="text-on-surface font-medium"
+                id="typewriter-text"
+              ></span>
+              <span
+                class="inline-block w-0.5 h-6 bg-primary ml-1 animate-pulse align-middle"
+                id="typewriter-cursor"
+              ></span>
+            </p>
+          </div>
+          <!-- Scroll CTA -->
+          <div class="mt-space-xl flex flex-col items-center gap-space-xs">
+            <a
+              class="group px-6 py-3 bg-primary text-on-primary rounded-xl shadow-md hover:shadow-xl transition-all duration-300 flex items-center gap-2 transform hover:-translate-y-0.5 active:translate-y-0"
+              href="#roster-section"
+            >
+              <span
+                class="font-body-md text-sm sm:text-base font-semibold tracking-wide"
+                >Meet the people behind our progress</span
+              >
+              <span
+                class="material-symbols-outlined group-hover:translate-y-1 transition-transform text-lg"
+                >arrow_downward</span
+              >
+            </a>
+            <span
+              class="font-mono text-[10px] text-outline uppercase tracking-widest mt-2"
+              >Scroll or click to explore archives</span
+            >
+          </div>
+        </div>
+      </section>
+      <!-- ========================================================================= -->
+      <!-- 2. THE TIMETABLE BECOMES A STORY (Staggered 3D Flip Grid) -->
+      <!-- ========================================================================= -->
+      <section
+        class="w-full py-space-3xl px-margin-mobile lg:px-margin-desktop bg-surface-container-low relative border-y border-surface-container"
+        id="roster-section"
+      >
+        <div class="max-w-[1200px] mx-auto">
+          <!-- Section Header -->
+          <div
+            class="flex flex-col md:flex-row items-start md:items-end justify-between mb-space-2xl gap-space-md"
+          >
+            <div class="flex flex-col">
+              <div class="flex items-center gap-2 mb-2">
+                <span
+                  class="px-2.5 py-0.5 bg-secondary-container text-on-secondary-container rounded-sm font-mono text-[10px] uppercase font-bold tracking-wider"
+                  >Weekly Schedule</span
+                >
+                <span class="text-outline text-xs">•</span>
+                <span class="font-mono text-xs text-outline"
+                  >L-402 Lab &amp; Lecture Hall</span
+                >
+              </div>
+              <h2 class="font-headline-lg text-3xl sm:text-4xl text-on-surface">
+                The Timetable Becomes a Story
+              </h2>
+              <p
+                class="font-body-md text-on-surface-variant max-w-xl mt-1 text-sm sm:text-base"
+              >
+                To the college portal, it was just slots on a Monday-to-Saturday
+                grid. To us, every cell was a distinct human being who refused
+                to let us give up on our messy code.
+              </p>
+            </div>
+            <!-- Flip Toggle Button -->
+            <button
+              class="flex items-center gap-2 px-5 py-2.5 bg-primary text-on-primary rounded-lg shadow-sm hover:bg-primary-container transition-all font-body-sm text-xs sm:text-sm font-semibold transform active:scale-95"
+              id="timetable-flip-btn"
+              onclick="toggleAllScheduleCards()"
+              type="button"
+            >
+              <span
+                class="material-symbols-outlined text-lg transition-transform"
+                id="flip-icon"
+                >cached</span
+              >
+              <span id="flip-btn-label">Flip All: Meet Our 8 Mentors</span>
+            </button>
+          </div>
+          <!-- Schedule Cards 8 Grid -->
+          <div
+            class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 reveal-on-scroll"
+            id="schedule-grid"
+          >
+            <!-- Card 1: Python -->
+            <div
+              class="timetable-card h-48 cursor-pointer perspective-1000 group"
+              onclick="flipSingleCard(this)"
+            >
+              <div
+                class="timetable-inner relative w-full h-full duration-500 transform-style-3d shadow-sm hover:shadow-md rounded-xl border border-surface-container transition-transform"
+              >
+                <!-- Front -->
+                <div
+                  class="timetable-front absolute inset-0 bg-surface-container-lowest p-4 rounded-xl flex flex-col justify-between backface-hidden"
+                >
+                  <div class="flex justify-between items-start">
+                    <span class="font-mono text-xs text-primary font-bold"
+                      >08:30 — 09:30</span
+                    >
+                    <span
+                      class="px-2 py-0.5 bg-surface-container text-on-surface-variant rounded text-[10px] font-mono"
+                      >MON / WED</span
+                    >
+                  </div>
+                  <div>
+                    <span
+                      class="font-mono text-[10px] text-outline uppercase block mb-1"
+                      >Core Tech • IT301</span
+                    >
+                    <h3
+                      class="font-headline-sm text-lg text-on-surface font-semibold"
+                    >
+                      Python Programming
+                    </h3>
+                  </div>
+                  <div
+                    class="flex items-center justify-between text-primary text-xs font-semibold pt-1 border-t border-surface-container-low"
+                  >
+                    <span>Reveal Guide</span>
+                    <span
+                      class="material-symbols-outlined text-sm group-hover:rotate-180 transition-transform"
+                      >sync</span
+                    >
+                  </div>
+                </div>
+                <!-- Back -->
+                <div
+                  class="timetable-back absolute inset-0 bg-primary text-on-primary p-4 rounded-xl flex flex-col justify-between rotate-y-180 backface-hidden"
+                >
+                  <span
+                    class="px-2 py-0.5 bg-primary-container text-on-primary-container self-start rounded text-[10px] font-mono uppercase font-bold"
+                    >Mentor Revealed</span
+                  >
+                  <div>
+                    <h4 class="font-headline-sm text-lg font-serif text-white">
+                      Dr. Ashwini Parab
+                    </h4>
+                    <p
+                      class="font-annotation-script text-sm text-on-primary/90 mt-1 italic leading-snug"
+                    >
+                      “Syntax can be patched; clear logic stays for life.”
+                    </p>
+                  </div>
+                  <span
+                    class="text-[10px] font-mono text-on-primary/85 flex items-center gap-1.5"
+                  >
+                    <span
+                      class="w-1.5 h-1.5 rounded-full bg-tertiary-fixed"
+                    ></span>
+                    Python • OOPs • Data Analysis
+                  </span>
+                </div>
+              </div>
+            </div>
+            <!-- Card 2: IR -->
+            <div
+              class="timetable-card h-48 cursor-pointer perspective-1000 group"
+              onclick="flipSingleCard(this)"
+            >
+              <div
+                class="timetable-inner relative w-full h-full duration-500 transform-style-3d shadow-sm hover:shadow-md rounded-xl border border-surface-container transition-transform"
+              >
+                <div
+                  class="timetable-front absolute inset-0 bg-surface-container-lowest p-4 rounded-xl flex flex-col justify-between backface-hidden"
+                >
+                  <div class="flex justify-between items-start">
+                    <span class="font-mono text-xs text-secondary font-bold"
+                      >09:30 — 10:30</span
+                    >
+                    <span
+                      class="px-2 py-0.5 bg-surface-container text-on-surface-variant rounded text-[10px] font-mono"
+                      >TUE / THU</span
+                    >
+                  </div>
+                  <div>
+                    <span
+                      class="font-mono text-[10px] text-outline uppercase block mb-1"
+                      >Search Architecture • IT302</span
+                    >
+                    <h3
+                      class="font-headline-sm text-lg text-on-surface font-semibold"
+                    >
+                      Information Retrieval
+                    </h3>
+                  </div>
+                  <div
+                    class="flex items-center justify-between text-secondary text-xs font-semibold pt-1 border-t border-surface-container-low"
+                  >
+                    <span>Reveal Guide</span>
+                    <span
+                      class="material-symbols-outlined text-sm group-hover:rotate-180 transition-transform"
+                      >sync</span
+                    >
+                  </div>
+                </div>
+                <div
+                  class="timetable-back absolute inset-0 bg-secondary text-on-secondary p-4 rounded-xl flex flex-col justify-between rotate-y-180 backface-hidden"
+                >
+                  <span
+                    class="px-2 py-0.5 bg-secondary-container text-on-secondary-container self-start rounded text-[10px] font-mono uppercase font-bold"
+                    >Mentor Revealed</span
+                  >
+                  <div>
+                    <h4 class="font-headline-sm text-lg font-serif text-white">
+                      Ms. Shruti Baikar
+                    </h4>
+                    <p
+                      class="font-annotation-script text-sm text-on-secondary/90 mt-1 italic leading-snug"
+                    >
+                      “Indexing answers to questions you forgot you had.”
+                    </p>
+                  </div>
+                  <span
+                    class="text-[10px] font-mono text-on-secondary/85 flex items-center gap-1.5"
+                  >
+                    <span
+                      class="w-1.5 h-1.5 rounded-full bg-secondary-fixed"
+                    ></span>
+                    Vector Models • Inverted Index
+                  </span>
+                </div>
+              </div>
+            </div>
+            <!-- Card 3: EDA -->
+            <div
+              class="timetable-card h-48 cursor-pointer perspective-1000 group"
+              onclick="flipSingleCard(this)"
+            >
+              <div
+                class="timetable-inner relative w-full h-full duration-500 transform-style-3d shadow-sm hover:shadow-md rounded-xl border border-surface-container transition-transform"
+              >
+                <div
+                  class="timetable-front absolute inset-0 bg-surface-container-lowest p-4 rounded-xl flex flex-col justify-between backface-hidden"
+                >
+                  <div class="flex justify-between items-start">
+                    <span class="font-mono text-xs text-tertiary font-bold"
+                      >10:45 — 11:45</span
+                    >
+                    <span
+                      class="px-2 py-0.5 bg-surface-container text-on-surface-variant rounded text-[10px] font-mono"
+                      >MON / FRI</span
+                    >
+                  </div>
+                  <div>
+                    <span
+                      class="font-mono text-[10px] text-outline uppercase block mb-1"
+                      >Data Insights • IT303</span
+                    >
+                    <h3
+                      class="font-headline-sm text-lg text-on-surface font-semibold"
+                    >
+                      Data Analysis (EDA)
+                    </h3>
+                  </div>
+                  <div
+                    class="flex items-center justify-between text-tertiary text-xs font-semibold pt-1 border-t border-surface-container-low"
+                  >
+                    <span>Reveal Guide</span>
+                    <span
+                      class="material-symbols-outlined text-sm group-hover:rotate-180 transition-transform"
+                      >sync</span
+                    >
+                  </div>
+                </div>
+                <div
+                  class="timetable-back absolute inset-0 bg-tertiary text-on-tertiary p-4 rounded-xl flex flex-col justify-between rotate-y-180 backface-hidden"
+                >
+                  <span
+                    class="px-2 py-0.5 bg-tertiary-container text-on-tertiary-container self-start rounded text-[10px] font-mono uppercase font-bold"
+                    >Mentor Revealed</span
+                  >
+                  <div>
+                    <h4 class="font-headline-sm text-lg font-serif text-white">
+                      Ms. Kadambari Samdure
+                    </h4>
+                    <p
+                      class="font-annotation-script text-sm text-on-tertiary/90 mt-1 italic leading-snug"
+                    >
+                      “Behind messy outliers lies genuine human truth.”
+                    </p>
+                  </div>
+                  <span
+                    class="text-[10px] font-mono text-on-tertiary/85 flex items-center gap-1.5"
+                  >
+                    <span
+                      class="w-1.5 h-1.5 rounded-full bg-tertiary-fixed"
+                    ></span>
+                    Distributions • Seaborn • Insights
+                  </span>
+                </div>
+              </div>
+            </div>
+            <!-- Card 4: Maths -->
+            <div
+              class="timetable-card h-48 cursor-pointer perspective-1000 group"
+              onclick="flipSingleCard(this)"
+            >
+              <div
+                class="timetable-inner relative w-full h-full duration-500 transform-style-3d shadow-sm hover:shadow-md rounded-xl border border-surface-container transition-transform"
+              >
+                <div
+                  class="timetable-front absolute inset-0 bg-surface-container-lowest p-4 rounded-xl flex flex-col justify-between backface-hidden"
+                >
+                  <div class="flex justify-between items-start">
+                    <span class="font-mono text-xs text-on-surface font-bold"
+                      >11:45 — 12:45</span
+                    >
+                    <span
+                      class="px-2 py-0.5 bg-surface-container text-on-surface-variant rounded text-[10px] font-mono"
+                      >TUE / WED</span
+                    >
+                  </div>
+                  <div>
+                    <span
+                      class="font-mono text-[10px] text-outline uppercase block mb-1"
+                      >Foundational Rigor • IT304</span
+                    >
+                    <h3
+                      class="font-headline-sm text-lg text-on-surface font-semibold"
+                    >
+                      Applied Mathematics
+                    </h3>
+                  </div>
+                  <div
+                    class="flex items-center justify-between text-outline text-xs font-semibold pt-1 border-t border-surface-container-low"
+                  >
+                    <span>Reveal Guide</span>
+                    <span
+                      class="material-symbols-outlined text-sm group-hover:rotate-180 transition-transform"
+                      >sync</span
+                    >
+                  </div>
+                </div>
+                <div
+                  class="timetable-back absolute inset-0 bg-inverse-surface text-inverse-on-surface p-4 rounded-xl flex flex-col justify-between rotate-y-180 backface-hidden"
+                >
+                  <span
+                    class="px-2 py-0.5 bg-surface-container-highest text-on-surface self-start rounded text-[10px] font-mono uppercase font-bold"
+                    >Mentor Revealed</span
+                  >
+                  <div>
+                    <h4 class="font-headline-sm text-lg font-serif text-white">
+                      Mr. Prathamesh Upkar
+                    </h4>
+                    <p
+                      class="font-annotation-script text-sm text-inverse-on-surface/90 mt-1 italic leading-snug"
+                    >
+                      “Every equation resolves when worked line by line.”
+                    </p>
+                  </div>
+                  <span
+                    class="text-[10px] font-mono text-inverse-on-surface/80 flex items-center gap-1.5"
+                  >
+                    <span
+                      class="w-1.5 h-1.5 rounded-full bg-primary-fixed"
+                    ></span>
+                    Matrices • Probability • Proofs
+                  </span>
+                </div>
+              </div>
+            </div>
+            <!-- Card 5: DSA -->
+            <div
+              class="timetable-card h-48 cursor-pointer perspective-1000 group"
+              onclick="flipSingleCard(this)"
+            >
+              <div
+                class="timetable-inner relative w-full h-full duration-500 transform-style-3d shadow-sm hover:shadow-md rounded-xl border border-surface-container transition-transform"
+              >
+                <div
+                  class="timetable-front absolute inset-0 bg-surface-container-lowest p-4 rounded-xl flex flex-col justify-between backface-hidden"
+                >
+                  <div class="flex justify-between items-start">
+                    <span class="font-mono text-xs text-primary font-bold"
+                      >01:15 — 02:15</span
+                    >
+                    <span
+                      class="px-2 py-0.5 bg-surface-container text-on-surface-variant rounded text-[10px] font-mono"
+                      >THU / FRI</span
+                    >
+                  </div>
+                  <div>
+                    <span
+                      class="font-mono text-[10px] text-outline uppercase block mb-1"
+                      >Algorithmic Core • IT305</span
+                    >
+                    <h3
+                      class="font-headline-sm text-lg text-on-surface font-semibold"
+                    >
+                      Data Structures
+                    </h3>
+                  </div>
+                  <div
+                    class="flex items-center justify-between text-primary text-xs font-semibold pt-1 border-t border-surface-container-low"
+                  >
+                    <span>Reveal Guide</span>
+                    <span
+                      class="material-symbols-outlined text-sm group-hover:rotate-180 transition-transform"
+                      >sync</span
+                    >
+                  </div>
+                </div>
+                <div
+                  class="timetable-back absolute inset-0 bg-primary-container text-on-primary-container p-4 rounded-xl flex flex-col justify-between rotate-y-180 backface-hidden"
+                >
+                  <span
+                    class="px-2 py-0.5 bg-on-primary-fixed text-primary-fixed self-start rounded text-[10px] font-mono uppercase font-bold"
+                    >Mentor Revealed</span
+                  >
+                  <div>
+                    <h4 class="font-headline-sm text-lg font-serif text-white">
+                      Ms. Archana Patil
+                    </h4>
+                    <p
+                      class="font-annotation-script text-sm text-on-primary-container/90 mt-1 italic leading-snug"
+                    >
+                      “Connecting nodes, safeguarding each student’s reference.”
+                    </p>
+                  </div>
+                  <span
+                    class="text-[10px] font-mono text-white/90 flex items-center gap-1.5"
+                  >
+                    <span
+                      class="w-1.5 h-1.5 rounded-full bg-tertiary-fixed"
+                    ></span>
+                    Linked Lists • Stacks • Trees
+                  </span>
+                </div>
+              </div>
+            </div>
+            <!-- Card 6: OS -->
+            <div
+              class="timetable-card h-48 cursor-pointer perspective-1000 group"
+              onclick="flipSingleCard(this)"
+            >
+              <div
+                class="timetable-inner relative w-full h-full duration-500 transform-style-3d shadow-sm hover:shadow-md rounded-xl border border-surface-container transition-transform"
+              >
+                <div
+                  class="timetable-front absolute inset-0 bg-surface-container-lowest p-4 rounded-xl flex flex-col justify-between backface-hidden"
+                >
+                  <div class="flex justify-between items-start">
+                    <span class="font-mono text-xs text-secondary font-bold"
+                      >02:15 — 03:15</span
+                    >
+                    <span
+                      class="px-2 py-0.5 bg-surface-container text-on-surface-variant rounded text-[10px] font-mono"
+                      >WED / SAT</span
+                    >
+                  </div>
+                  <div>
+                    <span
+                      class="font-mono text-[10px] text-outline uppercase block mb-1"
+                      >Systems Core • IT306</span
+                    >
+                    <h3
+                      class="font-headline-sm text-lg text-on-surface font-semibold"
+                    >
+                      Operating Systems
+                    </h3>
+                  </div>
+                  <div
+                    class="flex items-center justify-between text-secondary text-xs font-semibold pt-1 border-t border-surface-container-low"
+                  >
+                    <span>Reveal Guide</span>
+                    <span
+                      class="material-symbols-outlined text-sm group-hover:rotate-180 transition-transform"
+                      >sync</span
+                    >
+                  </div>
+                </div>
+                <div
+                  class="timetable-back absolute inset-0 bg-[#253342] text-on-secondary p-4 rounded-xl flex flex-col justify-between rotate-y-180 backface-hidden"
+                >
+                  <span
+                    class="px-2 py-0.5 bg-secondary-container text-on-secondary-container self-start rounded text-[10px] font-mono uppercase font-bold"
+                    >Mentor Revealed</span
+                  >
+                  <div>
+                    <h4 class="font-headline-sm text-lg font-serif text-white">
+                      Mr. Ninad Deshpande
+                    </h4>
+                    <p
+                      class="font-annotation-script text-sm text-white/90 mt-1 italic leading-snug"
+                    >
+                      “Scheduling tasks before memory reaches its threshold.”
+                    </p>
+                  </div>
+                  <span
+                    class="text-[10px] font-mono text-white/80 flex items-center gap-1.5"
+                  >
+                    <span
+                      class="w-1.5 h-1.5 rounded-full bg-primary-fixed"
+                    ></span>
+                    Deadlocks • Threads • Kernel
+                  </span>
+                </div>
+              </div>
+            </div>
+            <!-- Card 7: Hindi -->
+            <div
+              class="timetable-card h-48 cursor-pointer perspective-1000 group"
+              onclick="flipSingleCard(this)"
+            >
+              <div
+                class="timetable-inner relative w-full h-full duration-500 transform-style-3d shadow-sm hover:shadow-md rounded-xl border border-surface-container transition-transform"
+              >
+                <div
+                  class="timetable-front absolute inset-0 bg-surface-container-lowest p-4 rounded-xl flex flex-col justify-between backface-hidden"
+                >
+                  <div class="flex justify-between items-start">
+                    <span class="font-mono text-xs text-tertiary font-bold"
+                      >03:30 — 04:30</span
+                    >
+                    <span
+                      class="px-2 py-0.5 bg-surface-container text-on-surface-variant rounded text-[10px] font-mono"
+                      >SATURDAY</span
+                    >
+                  </div>
+                  <div>
+                    <span
+                      class="font-mono text-[10px] text-outline uppercase block mb-1"
+                      >Humanities &amp; Soul • IT307</span
+                    >
+                    <h3
+                      class="font-headline-sm text-lg text-on-surface font-semibold"
+                    >
+                      Hindi Bhasha &amp; Sahitya
+                    </h3>
+                  </div>
+                  <div
+                    class="flex items-center justify-between text-tertiary text-xs font-semibold pt-1 border-t border-surface-container-low"
+                  >
+                    <span>Reveal Guide</span>
+                    <span
+                      class="material-symbols-outlined text-sm group-hover:rotate-180 transition-transform"
+                      >sync</span
+                    >
+                  </div>
+                </div>
+                <div
+                  class="timetable-back absolute inset-0 bg-tertiary-container text-on-tertiary-container p-4 rounded-xl flex flex-col justify-between rotate-y-180 backface-hidden"
+                >
+                  <span
+                    class="px-2 py-0.5 bg-surface-container-lowest text-on-surface self-start rounded text-[10px] font-mono uppercase font-bold"
+                    >Mentor Revealed</span
+                  >
+                  <div>
+                    <h4
+                      class="font-headline-sm text-lg font-serif text-on-tertiary-container"
+                    >
+                      Mr. Krishna Pandit
+                    </h4>
+                    <p
+                      class="font-annotation-script text-sm text-on-tertiary-container/95 mt-1 italic leading-snug"
+                    >
+                      “भाषा केवल संवाद नहीं, संवेदना का गहरा प्रवाह है।”
+                    </p>
+                  </div>
+                  <span
+                    class="text-[10px] font-mono text-on-tertiary-container/90 flex items-center gap-1.5"
+                  >
+                    <span
+                      class="w-1.5 h-1.5 rounded-full bg-primary inline-block"
+                    ></span>
+                    Sahitya • Kavita • Vyakaran
+                  </span>
+                </div>
+              </div>
+            </div>
+            <!-- Card 8: Financial Literacy -->
+            <div
+              class="timetable-card h-48 cursor-pointer perspective-1000 group"
+              onclick="flipSingleCard(this)"
+            >
+              <div
+                class="timetable-inner relative w-full h-full duration-500 transform-style-3d shadow-sm hover:shadow-md rounded-xl border border-surface-container transition-transform"
+              >
+                <div
+                  class="timetable-front absolute inset-0 bg-surface-container-lowest p-4 rounded-xl flex flex-col justify-between backface-hidden"
+                >
+                  <div class="flex justify-between items-start">
+                    <span class="font-mono text-xs text-secondary font-bold"
+                      >04:30 — 05:30</span
+                    >
+                    <span
+                      class="px-2 py-0.5 bg-surface-container text-on-surface-variant rounded text-[10px] font-mono"
+                      >SATURDAY</span
+                    >
+                  </div>
+                  <div>
+                    <span
+                      class="font-mono text-[10px] text-outline uppercase block mb-1"
+                      >Life Mastery • IT308</span
+                    >
+                    <h3
+                      class="font-headline-sm text-lg text-on-surface font-semibold"
+                    >
+                      Financial Literacy
+                    </h3>
+                  </div>
+                  <div
+                    class="flex items-center justify-between text-secondary text-xs font-semibold pt-1 border-t border-surface-container-low"
+                  >
+                    <span>Reveal Guide</span>
+                    <span
+                      class="material-symbols-outlined text-sm group-hover:rotate-180 transition-transform"
+                      >sync</span
+                    >
+                  </div>
+                </div>
+                <div
+                  class="timetable-back absolute inset-0 bg-secondary-container text-on-secondary-container p-4 rounded-xl flex flex-col justify-between rotate-y-180 backface-hidden"
+                >
+                  <span
+                    class="px-2 py-0.5 bg-secondary text-on-secondary self-start rounded text-[10px] font-mono uppercase font-bold"
+                    >Mentor Revealed</span
+                  >
+                  <div>
+                    <h4
+                      class="font-headline-sm text-lg font-serif text-on-secondary-container"
+                    >
+                      Dr. Roshini U.
+                    </h4>
+                    <p
+                      class="font-annotation-script text-sm text-on-secondary-container/95 mt-1 italic leading-snug"
+                    >
+                      “Compound interest of kindness and lifelong financial
+                      clarity.”
+                    </p>
+                  </div>
+                  <span
+                    class="text-[10px] font-mono text-on-secondary-container/90 flex items-center gap-1.5"
+                  >
+                    <span
+                      class="w-1.5 h-1.5 rounded-full bg-secondary inline-block"
+                    ></span>
+                    Compounding • Assets • Future
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Banner Accent -->
+          <div
+            class="mt-space-xl p-space-md rounded-xl bg-surface-container border border-surface-container-highest text-center flex flex-col sm:flex-row items-center justify-center gap-3 text-on-surface"
+          >
+            <span
+              class="material-symbols-outlined text-primary text-2xl animate-pulse"
+              >auto_stories</span
+            >
+            <span class="font-headline-sm text-lg sm:text-xl font-medium"
+              >8 names. Hundreds of lectures. Countless quiet rescues.</span
+            >
+          </div>
+        </div>
+      </section>
+      <!-- ========================================================================= -->
+      <!-- 3. MEET THE PEOPLE — 8 HIGHLY PERSONALIZED ANIMATED TEACHER CARDS -->
+      <!-- ========================================================================= -->
+      <section
+        class="w-full py-space-3xl px-margin-mobile lg:px-margin-desktop bg-surface relative"
+        id="mentors-roster"
+      >
+        <div class="max-w-[1240px] mx-auto">
+          <div class="text-center max-w-2xl mx-auto mb-space-3xl">
+            <span
+              class="font-mono text-xs uppercase text-primary tracking-widest font-semibold block mb-2"
+              >The Mentorship Dossier</span
+            >
+            <h2
+              class="font-display-hero text-3xl sm:text-4xl lg:text-5xl text-on-surface font-serif"
+            >
+              Crafted by Hand, Guided by Heart
+            </h2>
+            <p class="font-body-md text-on-surface-variant mt-2">
+              Each polaroid captures their classroom persona with subject
+              micro-simulations.
+              <strong class="text-on-surface font-medium"
+                >Click any card to read the cohort dedication letter!</strong
+              >
+            </p>
+          </div>
+          <!-- 8 Teacher Polaroid Cards with 3D Flip to Letter & Tilt Glare -->
+          <div
+            class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 reveal-on-scroll"
+          >
+            <!-- 1. DR. ASHWINI PARAB (Python IDE simulation) -->
+            <div class="perspective-1000 polaroid-card-wrap">
+              <div
+                class="teacher-polaroid-flipper relative duration-700 transform-style-3d min-h-[460px]"
+                id="mentor-card-1"
+              >
+                <!-- FRONT: Card Persona -->
+                <div
+                  class="teacher-polaroid absolute inset-0 bg-surface-container-lowest p-4 rounded-xl shadow-md border border-surface-container flex flex-col justify-between backface-hidden cursor-pointer group"
+                  onclick="flipMentorCard(1, event)"
+                  tabindex="0"
+                  role="button"
+                  aria-label="Read cohort dedication to Dr. Ashwini Parab"
+                >
+                  <div
+                    class="w-full h-52 bg-[#1b1e22] text-[#d4d4d4] rounded-lg p-3 font-mono text-[11px] leading-tight overflow-hidden relative flex flex-col justify-between border border-white/10 group-hover:border-primary/50 transition-colors"
+                  >
+                    <div
+                      class="flex items-center justify-between text-white/40 border-b border-white/10 pb-1.5"
+                    >
+                      <span>ashwini_main.py</span>
+                      <span class="flex gap-1.5"
+                        ><span class="w-2 h-2 rounded-full bg-red-400"></span
+                        ><span class="w-2 h-2 rounded-full bg-amber-400"></span
+                        ><span class="w-2 h-2 rounded-full bg-green-400"></span
+                      ></span>
+                    </div>
+                    <div class="py-1 space-y-1">
+                      <p class="text-secondary-fixed-dim">
+                        def
+                        <span class="text-tertiary-fixed font-semibold"
+                          >teach_python</span
+                        >(batch):
+                      </p>
+                      <p class="pl-3 text-white/70">try:</p>
+                      <p class="pl-6 text-tertiary-fixed-dim">
+                        resolve_doubts(batch)
+                      </p>
+                      <p class="pl-3 text-white/70">except SyntaxConfusion:</p>
+                      <div class="relative h-5 pl-6">
+                        <p
+                          class="text-green-300 font-medium absolute inset-0 transition-opacity duration-200 group-hover:opacity-0 pointer-events-none"
+                        >
+                          &gt; explaining line-by-line...
+                        </p>
+                        <!-- Hover replacement -->
+                        <p
+                          class="text-green-400 font-semibold absolute inset-0 transition-opacity duration-200 opacity-0 group-hover:opacity-100 pointer-events-none animate-pulse"
+                        >
+                          &gt; ✨ Build Succeeded: Logic master!
+                        </p>
+                      </div>
+                    </div>
+                    <div
+                      class="flex items-center justify-between pt-1.5 border-t border-white/10 text-[10px] text-green-400"
+                    >
+                      <span class="group-hover:text-tertiary-fixed"
+                        >exit_code: 0 (Gratitude.py)</span
+                      >
+                      <span class="text-white/40">🐍 Python 3.12</span>
+                    </div>
+                  </div>
+                  <div class="pt-3 pb-1 flex flex-col">
+                    <div class="flex items-center justify-between">
+                      <span
+                        class="font-mono text-[10px] text-primary uppercase font-bold tracking-wider"
+                        >Python Programming</span
+                      >
+                      <span class="text-[11px] text-outline font-mono"
+                        >Lab In-Charge</span
+                      >
+                    </div>
+                    <h3
+                      class="font-headline-sm text-xl text-on-surface font-semibold mt-0.5"
+                    >
+                      Dr. Ashwini Parab
+                    </h3>
+                    <div
+                      class="mt-2 p-2 rounded bg-surface-container text-on-surface-variant text-xs"
+                    >
+                      <strong
+                        class="font-semibold text-primary block text-[10px] uppercase tracking-wider"
+                        >Special Ability</strong
+                      >
+                      Debugging our morning chaos into crystal-clear logic with
+                      infinite calm.
+                    </div>
+                    <div
+                      class="mt-3 text-primary text-xs font-semibold flex items-center justify-between"
+                    >
+                      <span>Click to read cohort note</span>
+                      <span class="material-symbols-outlined text-sm"
+                        >arrow_forward</span
+                      >
+                    </div>
+                  </div>
+                </div>
+                <!-- BACK: Dedication Note -->
+                <div
+                  class="teacher-letter absolute inset-0 bg-primary text-on-primary p-5 rounded-xl shadow-lg flex flex-col justify-between rotate-y-180 backface-hidden cursor-pointer"
+                  onclick="flipMentorCard(1, event)"
+                  tabindex="0"
+                  role="button"
+                  aria-label="Return to classroom persona for Dr. Ashwini Parab"
+                >
+                  <div>
+                    <span
+                      class="px-2 py-0.5 bg-primary-container text-on-primary-container text-[10px] font-mono uppercase font-bold rounded"
+                      >Personal Student Tribute</span
+                    >
+                    <h4
+                      class="font-headline-sm text-xl font-serif text-white mt-2"
+                    >
+                      To Dr. Ashwini Parab
+                    </h4>
+                    <p
+                      class="font-annotation-script text-sm text-white/95 mt-3 leading-relaxed italic"
+                    >
+                      “Thank you sir, hamari subah-subah wali errors dekhkar bhi
+                      aapki patience kabhi crash nahi hui. Jab hamari
+                      indentation ne dhokha diya, classes instantiate hone se
+                      mana kar diya aur code ne poora dimaag ghooma diya, tab
+                      bhi aap shaanti se hamare paas baithe aur samjhaya. Aapne
+                      sirf programming nahi sikhayi, balki ye bhi sikhaya ki
+                      asli programmer pehle gehri saans leta hai… phir error ko
+                      dobara dekhta hai.
+                    </p>
+                  </div>
+                  <div
+                    class="pt-3 border-t border-white/20 flex items-center justify-between"
+                  >
+                    <span class="text-xs font-mono text-white/80"
+                      >Batch of 2026–27</span
+                    >
+                    <button
+                      class="px-3 py-1 bg-white text-primary text-xs font-semibold rounded shadow-sm hover:bg-white/90"
+                      onclick="flipMentorCard(1, event)"
+                      aria-label="Back to Persona"
+                    >
+                      Back to Persona
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- 2. MS. SHRUTI BAIKAR (IR Search Engine simulation) -->
+            <div class="perspective-1000 polaroid-card-wrap">
+              <div
+                class="teacher-polaroid-flipper relative duration-700 transform-style-3d min-h-[460px]"
+                id="mentor-card-2"
+              >
+                <div
+                  class="teacher-polaroid absolute inset-0 bg-surface-container-lowest p-4 rounded-xl shadow-md border border-surface-container flex flex-col justify-between backface-hidden cursor-pointer group"
+                  onclick="flipMentorCard(2, event)"
+                  tabindex="0"
+                  role="button"
+                  aria-label="Read cohort dedication to Ms. Shruti Baikar"
+                >
+                  <div
+                    class="w-full h-52 bg-surface-container rounded-lg p-3 flex flex-col justify-between relative overflow-hidden border border-surface-container-high"
+                  >
+                    <div
+                      class="flex items-center gap-2 bg-surface-container-lowest px-2.5 py-1.5 rounded-full shadow-xs border border-surface-container-highest"
+                    >
+                      <span
+                        class="material-symbols-outlined text-secondary text-sm"
+                        >search</span
+                      >
+                      <span class="font-mono text-xs text-on-surface truncate"
+                        >find: "student_confidence"<span
+                          class="inline-block w-1.5 h-3 bg-secondary align-middle animate-pulse ml-0.5"
+                        ></span
+                      ></span>
+                    </div>
+                    <div class="space-y-2 my-auto">
+                      <div
+                        class="p-2 bg-surface-container-lowest rounded text-[11px] border-l-2 border-secondary group-hover:bg-secondary-fixed/40 transition-colors"
+                      >
+                        <span class="text-secondary font-bold block text-xs"
+                          >Precision: 100% • Recall: 100%</span
+                        >
+                        <span
+                          class="text-on-surface-variant text-[10px] leading-tight block mt-0.5"
+                          >Ranked #1 for staying back after lectures to clarify
+                          our indexing queries.</span
+                        >
+                      </div>
+                      <div
+                        class="p-1.5 bg-secondary-fixed/30 rounded text-[10px] text-secondary font-mono"
+                      >
+                        inverted_index['clarity'] → [Shruti Ma'am]
+                      </div>
+                    </div>
+                    <div class="text-[10px] text-outline font-mono text-right">
+                      Query latency: 0.001 ms
+                    </div>
+                  </div>
+                  <div class="pt-3 pb-1 flex flex-col">
+                    <div class="flex items-center justify-between">
+                      <span
+                        class="font-mono text-[10px] text-secondary uppercase font-bold tracking-wider"
+                        >Information Retrieval</span
+                      >
+                      <span class="text-[11px] text-outline font-mono"
+                        >Search Architect</span
+                      >
+                    </div>
+                    <h3
+                      class="font-headline-sm text-xl text-on-surface font-semibold mt-0.5"
+                    >
+                      Ms. Shruti Baikar
+                    </h3>
+                    <div
+                      class="mt-2 p-2 rounded bg-surface-container text-on-surface-variant text-xs"
+                    >
+                      <strong
+                        class="font-semibold text-secondary block text-[10px] uppercase tracking-wider"
+                        >Special Ability</strong
+                      >
+                      Instantaneous query retrieval to resolve complex index
+                      doubts with limitless patience.
+                    </div>
+                    <div
+                      class="mt-3 text-secondary text-xs font-semibold flex items-center justify-between"
+                    >
+                      <span>Click to read cohort note</span>
+                      <span class="material-symbols-outlined text-sm"
+                        >arrow_forward</span
+                      >
+                    </div>
+                  </div>
+                </div>
+                <!-- BACK -->
+                <div
+                  class="teacher-letter absolute inset-0 bg-secondary text-on-secondary p-5 rounded-xl shadow-lg flex flex-col justify-between rotate-y-180 backface-hidden cursor-pointer"
+                  onclick="flipMentorCard(2, event)"
+                  tabindex="0"
+                  role="button"
+                  aria-label="Return to classroom persona for Ms. Shruti Baikar"
+                >
+                  <div>
+                    <span
+                      class="px-2 py-0.5 bg-secondary-container text-on-secondary-container text-[10px] font-mono uppercase font-bold rounded"
+                      >Personal Student Tribute</span
+                    >
+                    <h4
+                      class="font-headline-sm text-xl font-serif text-white mt-2"
+                    >
+                      To Ms. Shruti Baikar
+                    </h4>
+                    <p
+                      class="font-annotation-script text-sm text-white/95 mt-3 leading-relaxed italic"
+                    >
+                      “Information Retrieval pehle humein sirf boring formulas
+                      aur samajh na aane wale vector spaces ka game lagta tha.
+                      Aapne ise itna relatable bana diya ki search engine kaise
+                      hamari intention samajhta hai, woh bhi interesting lagne
+                      laga. Hamare sabse ajeeb doubts ka bhi aapne bina judge
+                      kiye patiently answer diya. Aapne sirf search karna nahi
+                      sikhaya, balki sahi cheez ko samajhna bhi sikhaya.”
+                    </p>
+                  </div>
+                  <div
+                    class="pt-3 border-t border-white/20 flex items-center justify-between"
+                  >
+                    <span class="text-xs font-mono text-white/80"
+                      >Batch of 2026–27</span
+                    >
+                    <button
+                      class="px-3 py-1 bg-white text-secondary text-xs font-semibold rounded shadow-sm hover:bg-white/90"
+                      onclick="flipMentorCard(2, event)"
+                      aria-label="Back to Persona"
+                    >
+                      Back to Persona
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- 3. MS. KADAMBARI SAMDURE (Scatterplot & Trendline) -->
+            <div class="perspective-1000 polaroid-card-wrap">
+              <div
+                class="teacher-polaroid-flipper relative duration-700 transform-style-3d min-h-[460px]"
+                id="mentor-card-3"
+              >
+                <div
+                  class="teacher-polaroid absolute inset-0 bg-surface-container-lowest p-4 rounded-xl shadow-md border border-surface-container flex flex-col justify-between backface-hidden cursor-pointer group"
+                  onclick="flipMentorCard(3, event)"
+                  tabindex="0"
+                  role="button"
+                  aria-label="Read cohort dedication to Ms. Kadambari Samdure"
+                >
+                  <div
+                    class="w-full h-52 bg-surface-container rounded-lg p-3 flex flex-col justify-between relative overflow-hidden border border-surface-container-high"
+                  >
+                    <span
+                      class="font-mono text-[10px] text-tertiary uppercase font-bold"
+                      >plt.scatter(confusion, growth)</span
+                    >
+                    <svg class="w-full h-28 my-auto" viewbox="0 0 200 100">
+                      <line
+                        stroke="#dcc0bc"
+                        stroke-width="1"
+                        x1="20"
+                        x2="190"
+                        y1="80"
+                        y2="80"
+                      ></line>
+                      <line
+                        stroke="#dcc0bc"
+                        stroke-width="1"
+                        x1="20"
+                        x2="20"
+                        y1="10"
+                        y2="80"
+                      ></line>
+                      <circle
+                        class="group-hover:scale-125 transition-transform"
+                        cx="40"
+                        cy="70"
+                        fill="#bb5649"
+                        r="3.5"
+                      ></circle>
+                      <circle cx="65" cy="58" fill="#43617f" r="3.5"></circle>
+                      <circle cx="90" cy="46" fill="#caa84f" r="3.5"></circle>
+                      <circle
+                        class="group-hover:scale-125 transition-transform"
+                        cx="120"
+                        cy="36"
+                        fill="#9b3e33"
+                        r="4"
+                      ></circle>
+                      <circle cx="150" cy="24" fill="#755b02" r="3.5"></circle>
+                      <circle cx="175" cy="16" fill="#43617f" r="4.5"></circle>
+                      <!-- Trendline with dash animation on hover -->
+                      <path
+                        class="trendline-path transition-all duration-500 group-hover:stroke-primary"
+                        d="M 25 78 Q 100 50, 185 14"
+                        fill="none"
+                        stroke="#9b3e33"
+                        stroke-linecap="round"
+                        stroke-width="2.5"
+                      ></path>
+                    </svg>
+                    <div
+                      class="flex justify-between items-center text-[10px] font-mono text-tertiary font-bold"
+                    >
+                      <span>r = +0.999 (High Growth)</span>
+                      <span class="text-primary">No Outliers Left Behind</span>
+                    </div>
+                  </div>
+                  <div class="pt-3 pb-1 flex flex-col">
+                    <div class="flex items-center justify-between">
+                      <span
+                        class="font-mono text-[10px] text-tertiary uppercase font-bold tracking-wider"
+                        >Data Analysis (EDA)</span
+                      >
+                      <span class="text-[11px] text-outline font-mono"
+                        >Pattern Seeker</span
+                      >
+                    </div>
+                    <h3
+                      class="font-headline-sm text-xl text-on-surface font-semibold mt-0.5"
+                    >
+                      Ms. Kadambari Samdure
+                    </h3>
+                    <div
+                      class="mt-2 p-2 rounded bg-surface-container text-on-surface-variant text-xs"
+                    >
+                      <strong
+                        class="font-semibold text-tertiary block text-[10px] uppercase tracking-wider"
+                        >Special Ability</strong
+                      >
+                      Finding meaningful, uplifting patterns inside our raw and
+                      chaotic data points.
+                    </div>
+                    <div
+                      class="mt-3 text-tertiary text-xs font-semibold flex items-center justify-between"
+                    >
+                      <span>Click to read cohort note</span>
+                      <span class="material-symbols-outlined text-sm"
+                        >arrow_forward</span
+                      >
+                    </div>
+                  </div>
+                </div>
+                <!-- BACK -->
+                <div
+                  class="teacher-letter absolute inset-0 bg-tertiary text-on-tertiary p-5 rounded-xl shadow-lg flex flex-col justify-between rotate-y-180 backface-hidden cursor-pointer"
+                  onclick="flipMentorCard(3, event)"
+                  tabindex="0"
+                  role="button"
+                  aria-label="Return to classroom persona for Ms. Kadambari Samdure"
+                >
+                  <div>
+                    <span
+                      class="px-2 py-0.5 bg-tertiary-container text-on-tertiary-container text-[10px] font-mono uppercase font-bold rounded"
+                      >Personal Student Tribute</span
+                    >
+                    <h4
+                      class="font-headline-sm text-xl font-serif text-white mt-2"
+                    >
+                      To Ms. Kadambari Samdure
+                    </h4>
+                    <p
+                      class="font-annotation-script text-sm text-white/95 mt-3 leading-relaxed italic"
+                    >
+                      “Data ko spreadsheet mein clean karna toh easy hai, lekin
+                      uske peeche ki story samajhna utna simple nahi hota. Aapne
+                      humein sikhaya ki har number ke peeche ek real insaan, ek
+                      real situation aur ek real story hoti hai. Columns aur
+                      outliers ke beech bhi real individuals ko dekhna aur data
+                      ko sirf numbers nahi, balki ek kahani ki tarah samajhna —
+                      ye aapse seekhne ko mila.”
+                    </p>
+                  </div>
+                  <div
+                    class="pt-3 border-t border-white/20 flex items-center justify-between"
+                  >
+                    <span class="text-xs font-mono text-white/80"
+                      >Batch of 2026–27</span
+                    >
+                    <button
+                      class="px-3 py-1 bg-white text-tertiary text-xs font-semibold rounded shadow-sm hover:bg-white/90"
+                      onclick="flipMentorCard(3, event)"
+                      aria-label="Back to Persona"
+                    >
+                      Back to Persona
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- 4. MR. PRATHAMESH UPKAR (Chalkboard Math) -->
+            <div class="perspective-1000 polaroid-card-wrap">
+              <div
+                class="teacher-polaroid-flipper relative duration-700 transform-style-3d min-h-[460px]"
+                id="mentor-card-4"
+              >
+                <div
+                  class="teacher-polaroid absolute inset-0 bg-surface-container-lowest p-4 rounded-xl shadow-md border border-surface-container flex flex-col justify-between backface-hidden cursor-pointer group"
+                  onclick="flipMentorCard(4, event)"
+                  tabindex="0"
+                  role="button"
+                  aria-label="Read cohort dedication to Mr. Prathamesh Upkar"
+                >
+                  <div
+                    class="w-full h-52 bg-[#1b261f] text-emerald-100 rounded-lg p-3 flex flex-col justify-between relative shadow-inner border border-emerald-950"
+                  >
+                    <div
+                      class="flex justify-between text-[10px] font-mono text-emerald-300/60"
+                    >
+                      <span>BOARD L-402</span>
+                      <span class="font-bold">Q.E.D.</span>
+                    </div>
+                    <div class="text-center my-auto">
+                      <div
+                        class="font-serif text-2xl tracking-wide text-emerald-50 group-hover:scale-105 transition-transform"
+                      >
+                        ∫ (Effort) dt = Success
+                      </div>
+                      <div
+                        class="font-annotation-script text-emerald-200/90 text-sm mt-1 italic"
+                      >
+                        “Step-by-step, no step skipped.”
+                      </div>
+                    </div>
+                    <div
+                      class="text-[10px] font-mono text-emerald-300/80 flex items-center justify-between"
+                    >
+                      <span>Eigenvalues: Real</span>
+                      <span class="text-xs font-bold">lim (Doubt) → 0</span>
+                    </div>
+                  </div>
+                  <div class="pt-3 pb-1 flex flex-col">
+                    <div class="flex items-center justify-between">
+                      <span
+                        class="font-mono text-[10px] text-on-surface uppercase font-bold tracking-wider"
+                        >Applied Mathematics</span
+                      >
+                      <span class="text-[11px] text-outline font-mono"
+                        >Logic Anchor</span
+                      >
+                    </div>
+                    <h3
+                      class="font-headline-sm text-xl text-on-surface font-semibold mt-0.5"
+                    >
+                      Mr. Prathamesh Upkar
+                    </h3>
+                    <div
+                      class="mt-2 p-2 rounded bg-surface-container text-on-surface-variant text-xs"
+                    >
+                      <strong
+                        class="font-semibold text-on-surface block text-[10px] uppercase tracking-wider"
+                        >Special Ability</strong
+                      >
+                      Proving on the chalkboard that no complex equation stays
+                      unresolved for long.
+                    </div>
+                    <div
+                      class="mt-3 text-on-surface text-xs font-semibold flex items-center justify-between"
+                    >
+                      <span>Click to read cohort note</span>
+                      <span class="material-symbols-outlined text-sm"
+                        >arrow_forward</span
+                      >
+                    </div>
+                  </div>
+                </div>
+                <!-- BACK -->
+                <div
+                  class="teacher-letter absolute inset-0 bg-inverse-surface text-inverse-on-surface p-5 rounded-xl shadow-lg flex flex-col justify-between rotate-y-180 backface-hidden cursor-pointer"
+                  onclick="flipMentorCard(4, event)"
+                  tabindex="0"
+                  role="button"
+                  aria-label="Return to classroom persona for Mr. Prathamesh Upkar"
+                >
+                  <div>
+                    <span
+                      class="px-2 py-0.5 bg-surface-container-highest text-on-surface text-[10px] font-mono uppercase font-bold rounded"
+                      >Personal Student Tribute</span
+                    >
+                    <h4
+                      class="font-headline-sm text-xl font-serif text-white mt-2"
+                    >
+                      To Mr. Prathamesh Upkar
+                    </h4>
+                    <p
+                      class="font-annotation-script text-sm text-white/95 mt-3 leading-relaxed italic"
+                    >
+                      “Higher Math ka naam sunte hi poori row ki confidence ki
+                      battery low ho jaati thi. Lekin aapke calm aur systematic
+                      chalk derivations ne wahi dar dheere-dheere confidence
+                      mein badal diya. Jo questions pehle impossible lagte the,
+                      unhe aapne ek-ek step mein todkar samjhaya. Aapne humein
+                      sikhaya ki difficulty ka matlab impossible nahi hota, bas
+                      kuch steps aise hote hain jinka saamna abhi baaki hota
+                      hai.”
+                    </p>
+                  </div>
+                  <div
+                    class="pt-3 border-t border-white/20 flex items-center justify-between"
+                  >
+                    <span class="text-xs font-mono text-white/80"
+                      >Batch of 2026–27</span
+                    >
+                    <button
+                      class="px-3 py-1 bg-white text-inverse-surface text-xs font-semibold rounded shadow-sm hover:bg-white/90"
+                      onclick="flipMentorCard(4, event)"
+                      aria-label="Back to Persona"
+                    >
+                      Back to Persona
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- 5. MS. ARCHANA PATIL (DSA Linked List Simulation) -->
+            <div class="perspective-1000 polaroid-card-wrap">
+              <div
+                class="teacher-polaroid-flipper relative duration-700 transform-style-3d min-h-[460px]"
+                id="mentor-card-5"
+              >
+                <div
+                  class="teacher-polaroid absolute inset-0 bg-surface-container-lowest p-4 rounded-xl shadow-md border border-surface-container flex flex-col justify-between backface-hidden cursor-pointer group"
+                  onclick="flipMentorCard(5, event)"
+                  tabindex="0"
+                  role="button"
+                  aria-label="Read cohort dedication to Ms. Archana Patil"
+                >
+                  <div
+                    class="w-full h-52 bg-surface-container-low rounded-lg p-3 flex flex-col justify-between border border-surface-container-high"
+                  >
+                    <div class="text-[10px] font-mono text-primary font-bold">
+                      Node* head = new GuidanceNode();
+                    </div>
+                    <div
+                      class="flex items-center justify-center gap-1.5 my-auto overflow-x-auto py-1"
+                    >
+                      <div
+                        class="px-2 py-2 bg-primary text-on-primary rounded text-[10px] font-mono text-center shrink-0 shadow-xs"
+                      >
+                        <span class="block font-bold">SY</span>
+                        <span class="text-[8px] opacity-75">ptr→</span>
+                      </div>
+                      <span class="text-primary font-bold text-xs">→</span>
+                      <!-- Inserted node animation on hover -->
+                      <div
+                        class="px-2 py-2 bg-primary-container text-on-primary-container rounded text-[10px] font-mono text-center shrink-0 shadow-xs group-hover:scale-105 transition-transform will-change-transform"
+                      >
+                        <span class="block font-bold">Archana Maam</span>
+                        <span class="text-[8px] opacity-75">ptr→</span>
+                      </div>
+                      <span class="text-primary font-bold text-xs">→</span>
+                      <div
+                        class="px-2 py-2 bg-primary text-on-primary rounded text-[10px] font-mono text-center shrink-0 shadow-xs"
+                      >
+                        <span class="block font-bold">Success</span>
+                        <span class="text-[8px] opacity-75">NULL</span>
+                      </div>
+                    </div>
+                    <div
+                      class="text-[10px] font-mono text-outline flex justify-between font-bold"
+                    >
+                      <span>Complexity: O(1) Kindness</span>
+                      <span class="text-primary">No Null Pointer Panic</span>
+                    </div>
+                  </div>
+                  <div class="pt-3 pb-1 flex flex-col">
+                    <div class="flex items-center justify-between">
+                      <span
+                        class="font-mono text-[10px] text-primary uppercase font-bold tracking-wider"
+                        >Data Structures</span
+                      >
+                      <span class="text-[11px] text-outline font-mono"
+                        >Algorithm Queen</span
+                      >
+                    </div>
+                    <h3
+                      class="font-headline-sm text-xl text-on-surface font-semibold mt-0.5"
+                    >
+                      Ms. Archana Patil
+                    </h3>
+                    <div
+                      class="mt-2 p-2 rounded bg-surface-container text-on-surface-variant text-xs"
+                    >
+                      <strong
+                        class="font-semibold text-primary block text-[10px] uppercase tracking-wider"
+                        >Special Ability</strong
+                      >
+                      Traversing trees and safeguarding our student references
+                      from memory leaks.
+                    </div>
+                    <div
+                      class="mt-3 text-primary text-xs font-semibold flex items-center justify-between"
+                    >
+                      <span>Click to read cohort note</span>
+                      <span class="material-symbols-outlined text-sm"
+                        >arrow_forward</span
+                      >
+                    </div>
+                  </div>
+                </div>
+                <!-- BACK -->
+                <div
+                  class="teacher-letter absolute inset-0 bg-primary-container text-on-primary-container p-5 rounded-xl shadow-lg flex flex-col justify-between rotate-y-180 backface-hidden cursor-pointer"
+                  onclick="flipMentorCard(5, event)"
+                  tabindex="0"
+                  role="button"
+                  aria-label="Return to classroom persona for Ms. Archana Patil"
+                >
+                  <div>
+                    <span
+                      class="px-2 py-0.5 bg-on-primary-fixed text-primary-fixed text-[10px] font-mono uppercase font-bold rounded"
+                      >Personal Student Tribute</span
+                    >
+                    <h4
+                      class="font-headline-sm text-xl font-serif text-white mt-2"
+                    >
+                      To Ms. Archana Patil
+                    </h4>
+                    <p
+                      class="font-annotation-script text-sm text-white/95 mt-3 leading-relaxed italic"
+                    >
+                      “Pointers aur recursive functions ne humein kitni
+                      sleepless nights di hain, ye toh sirf hum jaante hain. Har
+                      address, stack frame aur tree traversal ko aapne itne
+                      simple tareeke se samjhaya ki jo concepts pehle impossible
+                      lagte the, woh dheere-dheere clear hone lage. Thank you
+                      sir, kabhi-kabhi hamara code link ho ya na ho, lekin aapne
+                      kabhi hamara understanding se link tootne nahi diya.”
+                    </p>
+                  </div>
+                  <div
+                    class="pt-3 border-t border-white/20 flex items-center justify-between"
+                  >
+                    <span class="text-xs font-mono text-white/80"
+                      >Batch of 2026–27</span
+                    >
+                    <button
+                      class="px-3 py-1 bg-white text-primary-container text-xs font-semibold rounded shadow-sm hover:bg-white/90"
+                      onclick="flipMentorCard(5, event)"
+                      aria-label="Back to Persona"
+                    >
+                      Back to Persona
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- 6. MR. NINAD DESHPANDE (OS Terminal Boot) -->
+            <div class="perspective-1000 polaroid-card-wrap">
+              <div
+                class="teacher-polaroid-flipper relative duration-700 transform-style-3d min-h-[460px]"
+                id="mentor-card-6"
+              >
+                <div
+                  class="teacher-polaroid absolute inset-0 bg-surface-container-lowest p-4 rounded-xl shadow-md border border-surface-container flex flex-col justify-between backface-hidden cursor-pointer group"
+                  onclick="flipMentorCard(6, event)"
+                  tabindex="0"
+                  role="button"
+                  aria-label="Read cohort dedication to Mr. Ninad Deshpande"
+                >
+                  <div
+                    class="w-full h-52 bg-[#12161a] text-secondary-fixed-dim rounded-lg p-3 font-mono text-[10px] leading-relaxed flex flex-col justify-between border border-white/10"
+                  >
+                    <div class="text-white/40 border-b border-white/10 pb-1">
+                      kernel_v2.6 :: ninad_daemon
+                    </div>
+                    <div class="space-y-1">
+                      <p>
+                        <span class="text-green-400 font-bold">[ OK ]</span>
+                        Mounted /dev/patience
+                      </p>
+                      <p>
+                        <span class="text-green-400 font-bold">[ OK ]</span>
+                        Threads allocated 1..60 (SY-IT)
+                      </p>
+                      <p>
+                        <span class="text-green-400 font-bold">[ OK ]</span>
+                        Zero deadlocks in memory
+                      </p>
+                      <div
+                        class="w-full bg-white/10 h-1.5 rounded-full overflow-hidden mt-2"
+                      >
+                        <div
+                          class="bg-secondary-fixed h-full w-[96%] group-hover:w-full transition-all"
+                        ></div>
+                      </div>
+                      <p class="text-white/60 text-[9px] text-right">
+                        CPU Scheduler: Fair Share (100%)
+                      </p>
+                    </div>
+                    <div class="text-[9px] text-white/50">
+                      signal(SIGTERM, never_give_up)
+                    </div>
+                  </div>
+                  <div class="pt-3 pb-1 flex flex-col">
+                    <div class="flex items-center justify-between">
+                      <span
+                        class="font-mono text-[10px] text-secondary uppercase font-bold tracking-wider"
+                        >Operating Systems</span
+                      >
+                      <span class="text-[11px] text-outline font-mono"
+                        >Thread Master</span
+                      >
+                    </div>
+                    <h3
+                      class="font-headline-sm text-xl text-on-surface font-semibold mt-0.5"
+                    >
+                      Mr. Ninad Deshpande
+                    </h3>
+                    <div
+                      class="mt-2 p-2 rounded bg-surface-container text-on-surface-variant text-xs"
+                    >
+                      <strong
+                        class="font-semibold text-secondary block text-[10px] uppercase tracking-wider"
+                        >Special Ability</strong
+                      >
+                      Multitasking 60 running student processes without a single
+                      kernel panic.
+                    </div>
+                    <div
+                      class="mt-3 text-secondary text-xs font-semibold flex items-center justify-between"
+                    >
+                      <span>Click to read cohort note</span>
+                      <span class="material-symbols-outlined text-sm"
+                        >arrow_forward</span
+                      >
+                    </div>
+                  </div>
+                </div>
+                <!-- BACK -->
+                <div
+                  class="teacher-letter absolute inset-0 bg-[#2b3b4b] text-on-secondary p-5 rounded-xl shadow-lg flex flex-col justify-between rotate-y-180 backface-hidden cursor-pointer"
+                  onclick="flipMentorCard(6, event)"
+                  tabindex="0"
+                  role="button"
+                  aria-label="Return to classroom persona for Mr. Ninad Deshpande"
+                >
+                  <div>
+                    <span
+                      class="px-2 py-0.5 bg-secondary-container text-on-secondary-container text-[10px] font-mono uppercase font-bold rounded"
+                      >Personal Student Tribute</span
+                    >
+                    <h4
+                      class="font-headline-sm text-xl font-serif text-white mt-2"
+                    >
+                      To Mr. Ninad Deshpande
+                    </h4>
+                    <p
+                      class="font-annotation-script text-sm text-white/95 mt-3 leading-relaxed italic"
+                    >
+                      “OS ke concepts kabhi-kabhi itne heavy aur confusing lagte
+                      the ki dimaag ka CPU 100% usage pe chala jaata tha. Lekin
+                      aapke simple examples aur lab ke beech ka humor ne sab
+                      kuch manageable bana diya. Jab hamare thoughts aur doubts
+                      ek saath multiple threads ki tarah chal rahe hote the, tab
+                      aapne har cheez ko patiently handle kiya. Sach mein, aap
+                      sirf OS nahi padhate the, aap hamari chaotic threads ko ek
+                      master scheduler ki tarah manage karte the.”
+                    </p>
+                  </div>
+                  <div
+                    class="pt-3 border-t border-white/20 flex items-center justify-between"
+                  >
+                    <span class="text-xs font-mono text-white/80"
+                      >Batch of 2026–27</span
+                    >
+                    <button
+                      class="px-3 py-1 bg-white text-[#2b3b4b] text-xs font-semibold rounded shadow-sm hover:bg-white/90"
+                      onclick="flipMentorCard(6, event)"
+                      aria-label="Back to Persona"
+                    >
+                      Back to Persona
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- 7. MR. KRISHNA PANDIT (Hindi Calligraphy) -->
+            <div class="perspective-1000 polaroid-card-wrap">
+              <div
+                class="teacher-polaroid-flipper relative duration-700 transform-style-3d min-h-[460px]"
+                id="mentor-card-7"
+              >
+                <div
+                  class="teacher-polaroid absolute inset-0 bg-surface-container-lowest p-4 rounded-xl shadow-md border border-surface-container flex flex-col justify-between backface-hidden cursor-pointer group"
+                  onclick="flipMentorCard(7, event)"
+                  tabindex="0"
+                  role="button"
+                  aria-label="Read cohort dedication to Mr. Krishna Pandit"
+                >
+                  <div
+                    class="w-full h-52 bg-[#fdf6e9] text-on-surface rounded-lg p-3 flex flex-col justify-between border border-amber-200/70 shadow-inner"
+                  >
+                    <div
+                      class="flex justify-between items-center text-[10px] text-tertiary font-mono"
+                    >
+                      <span>हिंदी साहित्य एवं संवेदना</span>
+                      <span
+                        class="material-symbols-outlined text-sm group-hover:rotate-12 transition-transform"
+                        >history_edu</span
+                      >
+                    </div>
+                    <div class="text-center my-auto">
+                      <div
+                        class="font-serif text-base font-semibold text-primary leading-snug"
+                      >
+                        “शुरुआत गलतियों से ही होती है, पर अंत हमेशा सीख में होता
+                        है।”
+                      </div>
+                      <span
+                        class="font-annotation-script text-xs text-outline italic block mt-1.5"
+                        >— जीवन दर्शन</span
+                      >
+                    </div>
+                    <div
+                      class="text-[10px] text-outline flex justify-between font-mono"
+                    >
+                      <span>काव्य • शब्द • भाव</span>
+                      <span>अनुराग</span>
+                    </div>
+                  </div>
+                  <div class="pt-3 pb-1 flex flex-col">
+                    <div class="flex items-center justify-between">
+                      <span
+                        class="font-mono text-[10px] text-tertiary uppercase font-bold tracking-wider"
+                        >Hindi Bhasha</span
+                      >
+                      <span class="text-[11px] text-outline font-mono"
+                        >Language Guide</span
+                      >
+                    </div>
+                    <h3
+                      class="font-headline-sm text-xl text-on-surface font-semibold mt-0.5"
+                    >
+                      Mr. Krishna Pandit
+                    </h3>
+                    <div
+                      class="mt-2 p-2 rounded bg-surface-container text-on-surface-variant text-xs"
+                    >
+                      <strong
+                        class="font-semibold text-tertiary block text-[10px] uppercase tracking-wider"
+                        >Special Ability</strong
+                      >
+                      Infusing rhythm, deep sensitivity, and soulful
+                      articulation into technical minds.
+                    </div>
+                    <div
+                      class="mt-3 text-tertiary text-xs font-semibold flex items-center justify-between"
+                    >
+                      <span>Click to read cohort note</span>
+                      <span class="material-symbols-outlined text-sm"
+                        >arrow_forward</span
+                      >
+                    </div>
+                  </div>
+                </div>
+                <!-- BACK -->
+                <div
+                  class="teacher-letter absolute inset-0 bg-tertiary-container text-on-tertiary-container p-5 rounded-xl shadow-lg flex flex-col justify-between rotate-y-180 backface-hidden cursor-pointer"
+                  onclick="flipMentorCard(7, event)"
+                  tabindex="0"
+                  role="button"
+                  aria-label="Return to classroom persona for Mr. Krishna Pandit"
+                >
+                  <div>
+                    <span
+                      class="px-2 py-0.5 bg-surface-container-lowest text-on-surface text-[10px] font-mono uppercase font-bold rounded"
+                      >Personal Student Tribute</span
+                    >
+                    <h4
+                      class="font-headline-sm text-xl font-serif text-on-tertiary-container mt-2"
+                    >
+                      To Mr. Krishna Pandit
+                    </h4>
+                    <p
+                      class="font-annotation-script text-sm text-on-tertiary-container mt-3 leading-relaxed italic"
+                    >
+                      “Machine logic aur syntax se bhari hamari duniya mein,
+                      aapke lectures ek breathing space jaise the. Jab har cheez
+                      ko code aur logic se samajhne ki aadat ho gayi thi, tab
+                      aapne humein yaad dilaya ki language sirf words ka
+                      combination nahi hai. Language hamari feelings, thoughts
+                      aur humanity ka reflection hai. Aapne humein sikhaya ki
+                      technology humein smart bana sakti hai, lekin emotions aur
+                      communication hi humein truly human banate hain.”
+                    </p>
+                  </div>
+                  <div
+                    class="pt-3 border-t border-on-tertiary-container/20 flex items-center justify-between"
+                  >
+                    <span
+                      class="text-xs font-mono text-on-tertiary-container/80"
+                      >Batch of 2026–27</span
+                    >
+                    <button
+                      class="px-3 py-1 bg-on-tertiary-container text-white text-xs font-semibold rounded shadow-sm"
+                      onclick="flipMentorCard(7, event)"
+                      aria-label="Back to Persona"
+                    >
+                      Back to Persona
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- 8. DR. ROSHINI U. (Finance Compounding) -->
+            <div class="perspective-1000 polaroid-card-wrap">
+              <div
+                class="teacher-polaroid-flipper relative duration-700 transform-style-3d min-h-[460px]"
+                id="mentor-card-8"
+              >
+                <div
+                  class="teacher-polaroid absolute inset-0 bg-surface-container-lowest p-4 rounded-xl shadow-md border border-surface-container flex flex-col justify-between backface-hidden cursor-pointer group"
+                  onclick="flipMentorCard(8, event)"
+                  tabindex="0"
+                  role="button"
+                  aria-label="Read cohort dedication to Dr. Roshini U."
+                >
+                  <div
+                    class="w-full h-52 bg-surface-container rounded-lg p-3 flex flex-col justify-between relative overflow-hidden border border-surface-container-high"
+                  >
+                    <div
+                      class="flex justify-between text-[10px] font-mono text-secondary font-bold"
+                    >
+                      <span>COMPOUNDING WISDOM</span>
+                      <span>A = P(1 + r/n)^nt</span>
+                    </div>
+                    <div class="flex items-center justify-center gap-3 my-auto">
+                      <span
+                        class="material-symbols-outlined text-4xl text-secondary group-hover:scale-125 transition-transform"
+                        >savings</span
+                      >
+                      <div class="flex flex-col">
+                        <span
+                          class="font-headline-sm text-xl text-on-surface font-serif font-bold"
+                          >∞ Yield</span
+                        >
+                        <span
+                          class="text-[11px] text-on-surface-variant font-mono"
+                          >on daily learning</span
+                        >
+                      </div>
+                    </div>
+                    <div
+                      class="w-full bg-surface-container-high h-1.5 rounded-full overflow-hidden"
+                    >
+                      <div
+                        class="bg-secondary h-full w-[90%] group-hover:w-full transition-all"
+                      ></div>
+                    </div>
+                  </div>
+                  <div class="pt-3 pb-1 flex flex-col">
+                    <div class="flex items-center justify-between">
+                      <span
+                        class="font-mono text-[10px] text-secondary uppercase font-bold tracking-wider"
+                        >Financial Literacy</span
+                      >
+                      <span class="text-[11px] text-outline font-mono"
+                        >Life Mentor</span
+                      >
+                    </div>
+                    <h3
+                      class="font-headline-sm text-xl text-on-surface font-semibold mt-0.5"
+                    >
+                      Dr. Roshini U.
+                    </h3>
+                    <div
+                      class="mt-2 p-2 rounded bg-surface-container text-on-surface-variant text-xs"
+                    >
+                      <strong
+                        class="font-semibold text-secondary block text-[10px] uppercase tracking-wider"
+                        >Special Ability</strong
+                      >
+                      Investing wisdom with infinite compounding dividends for
+                      our adult lives ahead.
+                    </div>
+                    <div
+                      class="mt-3 text-secondary text-xs font-semibold flex items-center justify-between"
+                    >
+                      <span>Click to read cohort note</span>
+                      <span class="material-symbols-outlined text-sm"
+                        >arrow_forward</span
+                      >
+                    </div>
+                  </div>
+                </div>
+                <!-- BACK -->
+                <div
+                  class="teacher-letter absolute inset-0 bg-secondary-container text-on-secondary-container p-5 rounded-xl shadow-lg flex flex-col justify-between rotate-y-180 backface-hidden cursor-pointer"
+                  onclick="flipMentorCard(8, event)"
+                  tabindex="0"
+                  role="button"
+                  aria-label="Return to classroom persona for Dr. Roshini U."
+                >
+                  <div>
+                    <span
+                      class="px-2 py-0.5 bg-secondary text-on-secondary text-[10px] font-mono uppercase font-bold rounded"
+                      >Personal Student Tribute</span
+                    >
+                    <h4
+                      class="font-headline-sm text-xl font-serif text-on-secondary-container mt-2"
+                    >
+                      To Dr. Roshini U.
+                    </h4>
+                    <p
+                      class="font-annotation-script text-sm text-on-secondary-container mt-3 leading-relaxed italic"
+                    >
+                      “Financial Literacy hamare syllabus ka sirf ek aur unit
+                      nahi tha, balki real life ke liye ek survival guide tha.
+                      Aapne humein sirf paison ko manage karna nahi sikhaya,
+                      balki compounding ki power, financial discipline aur
+                      soch-samajhkar decisions lena bhi sikhaya. Aapki wajah se
+                      samajh aaya ki paisa kamana important hai, lekin uski
+                      value samajhna aur sahi jagah use karna usse bhi zyada
+                      important hai.”
+                    </p>
+                  </div>
+                  <div
+                    class="pt-3 border-t border-on-secondary-container/20 flex items-center justify-between"
+                  >
+                    <span
+                      class="text-xs font-mono text-on-secondary-container/80"
+                      >Batch of 2026–27</span
+                    >
+                    <button
+                      class="px-3 py-1 bg-secondary text-white text-xs font-semibold rounded shadow-sm"
+                      onclick="flipMentorCard(8, event)"
+                      aria-label="Back to Persona"
+                    >
+                      Back to Persona
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- ========================================================================= -->
+      <!-- 4. MORE THAN A SUBJECT (Stepping Kinetic List) -->
+      <!-- ========================================================================= -->
+      <section
+        class="w-full py-space-3xl px-margin-mobile lg:px-margin-desktop bg-surface-container-high text-on-surface relative overflow-hidden border-t border-surface-container"
+      >
+        <div
+          class="max-w-[960px] mx-auto flex flex-col items-center text-center"
+        >
+          <span
+            class="font-mono text-xs text-primary uppercase tracking-widest font-bold mb-2"
+          >
+            The Unofficial Curriculum
+          </span>
+          <h2
+            class="font-headline-lg text-2xl sm:text-3xl lg:text-4xl text-on-surface font-medium leading-snug"
+          >
+            Beyond terminal outputs and credit marks, our 8 mentors quietly gave
+            us permission...
+          </h2>
+          <!-- Stepping Kinetic Affirmations -->
+          <div
+            class="mt-space-2xl space-y-3 w-full max-w-2xl text-left reveal-on-scroll"
+          >
+            <div
+              class="p-4 bg-surface-container-lowest rounded-xl shadow-xs border border-surface-container flex items-center gap-4 transform hover:translate-x-3 transition-transform cursor-default"
+            >
+              <span class="font-mono text-primary font-bold text-lg">01</span>
+              <span
+                class="font-headline-sm text-base sm:text-lg text-on-surface font-semibold"
+                >...to ask the question that felt too basic.</span
+              >
+            </div>
+            <div
+              class="p-4 bg-surface-container-lowest rounded-xl shadow-xs border border-surface-container flex items-center gap-4 transform hover:translate-x-3 transition-transform cursor-default sm:ml-4"
+            >
+              <span class="font-mono text-secondary font-bold text-lg">02</span>
+              <span
+                class="font-headline-sm text-base sm:text-lg text-on-surface font-semibold"
+                >...to make mistakes without losing our courage.</span
+              >
+            </div>
+            <div
+              class="p-4 bg-surface-container-lowest rounded-xl shadow-xs border border-surface-container flex items-center gap-4 transform hover:translate-x-3 transition-transform cursor-default sm:ml-8"
+            >
+              <span class="font-mono text-tertiary font-bold text-lg">03</span>
+              <span
+                class="font-headline-sm text-base sm:text-lg text-on-surface font-semibold"
+                >...to erase, rewrite, and try one more time.</span
+              >
+            </div>
+            <div
+              class="p-4 bg-surface-container-lowest rounded-xl shadow-xs border border-surface-container flex items-center gap-4 transform hover:translate-x-3 transition-transform cursor-default sm:ml-12"
+            >
+              <span class="font-mono text-primary-container font-bold text-lg"
+                >04</span
+              >
+              <span
+                class="font-headline-sm text-base sm:text-lg text-on-surface font-semibold"
+                >...to look past raw data and think with human empathy.</span
+              >
+            </div>
+            <div
+              class="p-4 bg-primary text-on-primary rounded-xl shadow-md flex items-center gap-4 transform hover:translate-x-3 transition-transform cursor-default sm:ml-6"
+            >
+              <span class="font-mono text-on-primary/75 font-bold text-lg"
+                >05</span
+              >
+              <span
+                class="font-headline-sm text-base sm:text-lg text-on-primary font-semibold"
+                >...to genuinely believe that we can figure it out.</span
+              >
+            </div>
+          </div>
+          <!-- Holding Statement -->
+          <div class="mt-space-2xl max-w-xl">
+            <p
+              class="font-annotation-script text-2xl sm:text-3xl text-on-surface italic font-medium leading-relaxed"
+            >
+              “And that is something no university syllabus can ever formally
+              measure.”
+            </p>
+          </div>
+        </div>
+      </section>
+      <!-- ========================================================================= -->
+      <!-- 5. OUR SEMESTER AS A MOVIE (Retro Cinema Poster & Plot Sheet) -->
+      <!-- ========================================================================= -->
+      <section
+        class="w-full py-space-3xl px-margin-mobile lg:px-margin-desktop bg-surface relative"
+      >
+        <div class="max-w-[1040px] mx-auto">
+          <!-- Filmstrip Sprocket Perforations -->
+          <div
+            class="w-full h-8 bg-inverse-surface rounded-t-xl flex items-center justify-around px-4 overflow-hidden"
+          >
+            <div class="w-3.5 h-3.5 rounded-xs bg-surface opacity-90"></div>
+            <div class="w-3.5 h-3.5 rounded-xs bg-surface opacity-90"></div>
+            <div class="w-3.5 h-3.5 rounded-xs bg-surface opacity-90"></div>
+            <div class="w-3.5 h-3.5 rounded-xs bg-surface opacity-90"></div>
+            <div class="w-3.5 h-3.5 rounded-xs bg-surface opacity-90"></div>
+            <div class="w-3.5 h-3.5 rounded-xs bg-surface opacity-90"></div>
+            <div class="w-3.5 h-3.5 rounded-xs bg-surface opacity-90"></div>
+            <div class="w-3.5 h-3.5 rounded-xs bg-surface opacity-90"></div>
+            <div class="w-3.5 h-3.5 rounded-xs bg-surface opacity-90"></div>
+            <div class="w-3.5 h-3.5 rounded-xs bg-surface opacity-90"></div>
+          </div>
+          <!-- Poster Box -->
+          <div
+            class="bg-surface-container-lowest p-6 sm:p-10 rounded-b-xl shadow-xl border border-t-0 border-surface-container flex flex-col md:flex-row gap-8 items-center relative overflow-hidden reveal-on-scroll"
+          >
+            <!-- Left: Movie Title Block -->
+            <div
+              class="w-full md:w-1/2 flex flex-col items-center text-center p-6 bg-surface-container-low rounded-xl border border-surface-container"
+            >
+              <span
+                class="font-mono text-[10px] uppercase text-primary tracking-widest font-bold mb-1"
+                >A SYB.Sc.IT Blockbuster Production</span
+              >
+              <h3
+                class="font-display-hero text-3xl sm:text-5xl text-on-surface font-serif uppercase tracking-tight"
+              >
+                OUR SEMESTER
+              </h3>
+              <span
+                class="font-annotation-script text-primary italic text-lg sm:text-xl -mt-1"
+                >The Struggle, The Solace, The Syntax</span
+              >
+              <div
+                class="my-4 w-full py-2 bg-surface-container rounded-lg font-mono text-[11px] text-on-surface-variant flex justify-around border border-surface-container-high"
+              >
+                <span>RATED: U/A</span>
+                <span>RUNTIME: 180 DAYS</span>
+                <span>GENRE: ACADEMIC THRILLER</span>
+              </div>
+              <!-- Stamped Emblem -->
+              <div
+                class="mt-2 border-2 border-dashed border-primary/50 rounded-full px-4 py-2 rotate-3 bg-primary-fixed/20"
+              >
+                <span
+                  class="font-mono text-xs text-primary uppercase font-bold tracking-wider"
+                >
+                  DIRECTED BY OUR 8 TEACHERS ❤️
+                </span>
+              </div>
+            </div>
+            <!-- Right: Cinematic Cast & Plot Sheet -->
+            <div class="w-full md:w-1/2 flex flex-col gap-3 text-sm">
+              <div
+                class="flex items-start justify-between pb-2 border-b border-surface-container"
+              >
+                <span
+                  class="font-mono text-xs text-outline uppercase font-semibold"
+                  >Lead Cast</span
+                >
+                <span
+                  class="font-body-md font-semibold text-on-surface text-right"
+                  >The 8 IT Faculty Members</span
+                >
+              </div>
+              <div
+                class="flex items-start justify-between pb-2 border-b border-surface-container"
+              >
+                <span
+                  class="font-mono text-xs text-outline uppercase font-semibold"
+                  >Supporting Troupe</span
+                >
+                <span class="font-body-md text-on-surface text-right"
+                  >45 Over-Caffeinated Students</span
+                >
+              </div>
+              <div
+                class="flex items-start justify-between pb-2 border-b border-surface-container"
+              >
+                <span
+                  class="font-mono text-xs text-primary uppercase font-semibold"
+                  >Recurring Antagonist</span
+                >
+                <span class="font-body-md font-semibold text-primary text-right"
+                  >75% Mandatory Attendance Deficit</span
+                >
+              </div>
+              <div
+                class="flex items-start justify-between pb-2 border-b border-surface-container"
+              >
+                <span
+                  class="font-mono text-xs text-error uppercase font-semibold"
+                  >Final Boss</span
+                >
+                <span class="font-body-md font-semibold text-error text-right"
+                  >Semester Practical &amp; Theory Exams</span
+                >
+              </div>
+              <div class="flex items-start justify-between pt-1">
+                <span
+                  class="font-mono text-xs text-tertiary uppercase font-semibold"
+                  >Critical Plot Twist</span
+                >
+                <span
+                  class="font-annotation-script text-base text-on-surface italic text-right max-w-[240px]"
+                >
+                  “Against all odds, we actually understood the concepts and
+                  grew up.”
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- ========================================================================= -->
+      <!-- 6. THE CLASSROOM STICKY WALL (Post-its + Modal + Heart Reaction) -->
+      <!-- ========================================================================= -->
+      <section
+        class="w-full py-space-3xl px-margin-mobile lg:px-margin-desktop bg-surface-container-low relative border-y border-surface-container"
+        id="memory-board"
+      >
+        <div class="max-w-[1240px] mx-auto">
+          <div class="text-center max-w-xl mx-auto mb-space-2xl">
+            <span
+              class="font-mono text-xs text-secondary uppercase tracking-widest font-bold"
+              >Pinboard Keepsake</span
+            >
+            <h2
+              class="font-headline-lg text-3xl sm:text-4xl text-on-surface mt-1"
+            >
+              The Classroom Sticky Wall
+            </h2>
+            <p
+              class="font-body-md text-on-surface-variant mt-1 text-sm sm:text-base"
+            >
+              Click any student note to read our unvarnished memories from the
+              cohort!
+            </p>
+          </div>
+          <!-- 8 Sticky Notes Grid -->
+          <div
+            class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 reveal-on-scroll"
+          >
+            <!-- Sticky 1 (Yellow Ochre) -->
+            <div
+              class="sticky-note-card cursor-pointer bg-[#fff4cc] border border-amber-300/80 p-5 rounded-lg shadow-sm hover:shadow-xl transition-all duration-300 transform -rotate-2 hover:rotate-0 hover:-translate-y-2 flex flex-col justify-between min-h-[220px]"
+              onclick="openStickyModal(1)"
+              role="button"
+              tabindex="0"
+              aria-label="Read student memory note for Dr. Ashwini Parab"
+            >
+              <div
+                class="w-3.5 h-3.5 rounded-full bg-primary mx-auto -mt-2 shadow-xs"
+              ></div>
+              <p
+                class="font-annotation-script text-on-surface text-base leading-snug my-2"
+              >
+                “Thank you for not laughing when my code crashed the interpreter
+                on line 2. You taught us patience first, python second.”
+              </p>
+              <div
+                class="pt-2 border-t border-amber-900/10 flex justify-between items-center text-xs font-mono text-on-surface-variant"
+              >
+                <span>Dr. Ashwini Parab</span>
+                <span class="text-[11px] font-bold text-primary"
+                  >SYB.Sc.IT</span
+                >
+              </div>
+            </div>
+            <!-- Sticky 2 (Pale Slate Blue) -->
+            <div
+              class="sticky-note-card cursor-pointer bg-[#e0efff] border border-blue-200 p-5 rounded-lg shadow-sm hover:shadow-xl transition-all duration-300 transform rotate-2 hover:rotate-0 hover:-translate-y-2 flex flex-col justify-between min-h-[220px]"
+              onclick="openStickyModal(2)"
+              role="button"
+              tabindex="0"
+              aria-label="Read student memory note for Ms. Shruti Baikar"
+            >
+              <div
+                class="w-3.5 h-3.5 rounded-full bg-secondary mx-auto -mt-2 shadow-xs"
+              ></div>
+              <p
+                class="font-annotation-script text-on-surface text-base leading-snug my-2"
+              >
+                “You never made our questions feel redundant. When our internal
+                index was blank, you were our real-world search engine.”
+              </p>
+              <div
+                class="pt-2 border-t border-blue-900/10 flex justify-between items-center text-xs font-mono text-on-surface-variant"
+              >
+                <span>Ms. Shruti Baikar</span>
+                <span class="text-[11px] font-bold text-secondary"
+                  >SYB.Sc.IT</span
+                >
+              </div>
+            </div>
+            <!-- Sticky 3 (Warm Peach) -->
+            <div
+              class="sticky-note-card cursor-pointer bg-[#ffe5e0] border border-rose-200 p-5 rounded-lg shadow-sm hover:shadow-xl transition-all duration-300 transform -rotate-1 hover:rotate-0 hover:-translate-y-2 flex flex-col justify-between min-h-[220px]"
+              onclick="openStickyModal(3)"
+              role="button"
+              tabindex="0"
+              aria-label="Read student memory note for Ms. Kadambari Samdure"
+            >
+              <div
+                class="w-3.5 h-3.5 rounded-full bg-primary mx-auto -mt-2 shadow-xs"
+              ></div>
+              <p
+                class="font-annotation-script text-on-surface text-base leading-snug my-2"
+              >
+                “You treated every single student as a unique data point
+                deserving individualized care. Thank you for shaping our
+                mindset.”
+              </p>
+              <div
+                class="pt-2 border-t border-rose-900/10 flex justify-between items-center text-xs font-mono text-on-surface-variant"
+              >
+                <span>Ms. Kadambari Samdure</span>
+                <span class="text-[11px] font-bold text-primary"
+                  >SYB.Sc.IT</span
+                >
+              </div>
+            </div>
+            <!-- Sticky 4 (Muted Green) -->
+            <div
+              class="sticky-note-card cursor-pointer bg-[#e2f3e5] border border-emerald-200 p-5 rounded-lg shadow-sm hover:shadow-xl transition-all duration-300 transform rotate-3 hover:rotate-0 hover:-translate-y-2 flex flex-col justify-between min-h-[220px]"
+              onclick="openStickyModal(4)"
+              role="button"
+              tabindex="0"
+              aria-label="Read student memory note for Mr. Prathamesh Upkar"
+            >
+              <div
+                class="w-3.5 h-3.5 rounded-full bg-tertiary mx-auto -mt-2 shadow-xs"
+              ></div>
+              <p
+                class="font-annotation-script text-on-surface text-base leading-snug my-2"
+              >
+                “Every time you solved on that green board, it proved hard
+                problems just take steady lines. Respect always, sir.”
+              </p>
+              <div
+                class="pt-2 border-t border-emerald-900/10 flex justify-between items-center text-xs font-mono text-on-surface-variant"
+              >
+                <span>Mr. Prathamesh Upkar</span>
+                <span class="text-[11px] font-bold text-tertiary"
+                  >SYB.Sc.IT</span
+                >
+              </div>
+            </div>
+            <!-- Sticky 5 (Ochre Gold) -->
+            <div
+              class="sticky-note-card cursor-pointer bg-[#fff0d4] border border-amber-200 p-5 rounded-lg shadow-sm hover:shadow-xl transition-all duration-300 transform rotate-1 hover:rotate-0 hover:-translate-y-2 flex flex-col justify-between min-h-[220px]"
+              onclick="openStickyModal(5)"
+              role="button"
+              tabindex="0"
+              aria-label="Read student memory note for Ms. Archana Patil"
+            >
+              <div
+                class="w-3.5 h-3.5 rounded-full bg-primary mx-auto -mt-2 shadow-xs"
+              ></div>
+              <p
+                class="font-annotation-script text-on-surface text-base leading-snug my-2"
+              >
+                “When our pointers pointed to NULL, you helped us reconnect the
+                sequence without panic. Thank you Ma'am!”
+              </p>
+              <div
+                class="pt-2 border-t border-amber-900/10 flex justify-between items-center text-xs font-mono text-on-surface-variant"
+              >
+                <span>Ms. Archana Patil</span>
+                <span class="text-[11px] font-bold text-primary"
+                  >SYB.Sc.IT</span
+                >
+              </div>
+            </div>
+            <!-- Sticky 6 (Soft Slate) -->
+            <div
+              class="sticky-note-card cursor-pointer bg-[#e8ecf2] border border-slate-300 p-5 rounded-lg shadow-sm hover:shadow-xl transition-all duration-300 transform -rotate-3 hover:rotate-0 hover:-translate-y-2 flex flex-col justify-between min-h-[220px]"
+              onclick="openStickyModal(6)"
+              role="button"
+              tabindex="0"
+              aria-label="Read student memory note for Mr. Ninad Deshpande"
+            >
+              <div
+                class="w-3.5 h-3.5 rounded-full bg-secondary mx-auto -mt-2 shadow-xs"
+              ></div>
+              <p
+                class="font-annotation-script text-on-surface text-base leading-snug my-2"
+              >
+                “Your humor kept our CPU temperatures normal during intense OS
+                labs. Sir, you are our true kernel!”
+              </p>
+              <div
+                class="pt-2 border-t border-slate-900/10 flex justify-between items-center text-xs font-mono text-on-surface-variant"
+              >
+                <span>Mr. Ninad Deshpande</span>
+                <span class="text-[11px] font-bold text-secondary"
+                  >SYB.Sc.IT</span
+                >
+              </div>
+            </div>
+            <!-- Sticky 7 (Parchment Tone) -->
+            <div
+              class="sticky-note-card cursor-pointer bg-[#fcf2e3] border border-amber-200/90 p-5 rounded-lg shadow-sm hover:shadow-xl transition-all duration-300 transform rotate-2 hover:rotate-0 hover:-translate-y-2 flex flex-col justify-between min-h-[220px]"
+              onclick="openStickyModal(7)"
+              role="button"
+              tabindex="0"
+              aria-label="Read student memory note for Mr. Krishna Pandit"
+            >
+              <div
+                class="w-3.5 h-3.5 rounded-full bg-primary mx-auto -mt-2 shadow-xs"
+              ></div>
+              <p
+                class="font-annotation-script text-on-surface text-base leading-snug my-2"
+              >
+                “आपके शब्दों ने हमें केवल भाषा ही नहीं, जीवन को गहराई से देखने
+                का नजरिया भी सिखाया। कोटिशः धन्यवाद सर।”
+              </p>
+              <div
+                class="pt-2 border-t border-amber-900/10 flex justify-between items-center text-xs font-mono text-on-surface-variant"
+              >
+                <span>Mr. Krishna Pandit</span>
+                <span class="text-[11px] font-bold text-primary"
+                  >SYB.Sc.IT</span
+                >
+              </div>
+            </div>
+            <!-- Sticky 8 (Mint / Sage) -->
+            <div
+              class="sticky-note-card cursor-pointer bg-[#e1f0e6] border border-teal-200 p-5 rounded-lg shadow-sm hover:shadow-xl transition-all duration-300 transform -rotate-2 hover:rotate-0 hover:-translate-y-2 flex flex-col justify-between min-h-[220px]"
+              onclick="openStickyModal(8)"
+              role="button"
+              tabindex="0"
+              aria-label="Read student memory note for Dr. Roshini U."
+            >
+              <div
+                class="w-3.5 h-3.5 rounded-full bg-secondary mx-auto -mt-2 shadow-xs"
+              ></div>
+              <p
+                class="font-annotation-script text-on-surface text-base leading-snug my-2"
+              >
+                “You taught us how value accumulates over time. We will always
+                compound the lessons you imparted to us.”
+              </p>
+              <div
+                class="pt-2 border-t border-teal-900/10 flex justify-between items-center text-xs font-mono text-on-surface-variant"
+              >
+                <span>Dr. Roshini U.</span>
+                <span class="text-[11px] font-bold text-secondary"
+                  >SYB.Sc.IT</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- MODAL FOR STICKY NOTE EXPANSION -->
+      <div
+        class="fixed inset-0 z-50 bg-inverse-surface/60 backdrop-blur-sm hidden items-center justify-center p-4 transition-opacity duration-300"
+        id="sticky-modal"
+      >
+        <div
+          class="bg-surface max-w-md w-full p-6 rounded-2xl shadow-2xl relative flex flex-col gap-4 border-t-8 border-primary transform transition-transform"
+          id="sticky-modal-card"
+        >
+          <button
+            aria-label="Close modal"
+            class="absolute top-4 right-4 text-outline hover:text-on-surface w-8 h-8 rounded-full flex items-center justify-center hover:bg-surface-container"
+            onclick="closeStickyModal()"
+          >
+            <span class="material-symbols-outlined">close</span>
+          </button>
+          <div>
+            <span
+              class="font-mono text-xs uppercase text-primary font-bold tracking-wider"
+              id="modal-teacher-label"
+              >Student Memory Note</span
+            >
+            <h3
+              class="font-headline-sm text-2xl text-on-surface font-semibold mt-1"
+              id="modal-teacher-name"
+            >
+              Faculty Name
+            </h3>
+          </div>
+          <p
+            class="font-annotation-script text-xl text-on-surface-variant leading-relaxed italic"
+            id="modal-body-text"
+          >
+            Note text...
+          </p>
+          <!-- Modal Archive Footer -->
+          <div
+            class="pt-3 border-t border-surface-container flex items-center justify-between"
+          >
+            <span class="font-mono text-xs text-primary font-bold"
+              >SYB.Sc.IT Archives</span
+            >
+            <span class="font-mono text-xs text-outline font-bold"
+              >2026–2027</span
+            >
+          </div>
+        </div>
+      </div>
+      <!-- ========================================================================= -->
+      <!-- 7. FINAL NIGHT EPILOGUE & CREDITS (Twinkling Dust Canvas + Tribute) -->
+      <!-- ========================================================================= -->
+      <section
+        class="w-full min-h-screen py-space-4xl px-margin-mobile lg:px-margin-desktop bg-[#131715] text-inverse-on-surface relative flex flex-col items-center justify-center overflow-hidden"
+        id="slate-dedication"
+      >
+        <!-- Twinkling Ambient Dust HTML5 Canvas -->
+        <canvas
+          class="absolute inset-0 pointer-events-none w-full h-full"
+          id="twinkle-canvas"
+        ></canvas>
+        <div
+          class="max-w-[840px] w-full mx-auto text-center relative z-10 flex flex-col items-center"
+        >
+          <!-- Poetic Whispers -->
+          <div class="space-y-4 mb-space-2xl">
+            <p class="font-body-lg text-lg text-white/50 font-serif italic">
+              “One day, we may forget the syntax.”
+            </p>
+            <p class="font-body-lg text-lg text-white/65 font-serif italic">
+              “We may forget the intricate formulas.”
+            </p>
+            <p class="font-body-lg text-lg text-white/80 font-serif italic">
+              “We may forget the textbook definitions.”
+            </p>
+            <p
+              class="font-headline-sm text-2xl sm:text-3xl text-tertiary-fixed font-serif font-medium mt-4"
+            >
+              “...But we will always remember the people who taught us.”
+            </p>
+          </div>
+          <!-- Glowing Tribute Badge -->
+          <div
+            class="py-8 px-6 sm:px-12 bg-white/5 rounded-2xl backdrop-blur-md border border-white/15 shadow-2xl flex flex-col items-center my-6 max-w-2xl w-full"
+          >
+            <div class="flex items-center gap-2 text-primary-fixed mb-2">
+              <span class="material-symbols-outlined text-3xl animate-pulse"
+                >favorite</span
+              >
+              <span
+                class="font-mono text-xs uppercase tracking-widest font-bold"
+                >Academic Year 2026–2027</span
+              >
+            </div>
+            <h1
+              class="font-display-hero text-3xl sm:text-5xl text-white font-serif tracking-tight drop-shadow-md"
+            >
+              HAPPY TEACHERS’ DAY
+            </h1>
+            <p
+              class="font-annotation-script text-xl sm:text-2xl text-white/90 italic mt-3 leading-relaxed"
+            >
+              To our 8 extraordinary teachers: Thank you for believing in us
+              before we learned to believe in ourselves.
+            </p>
+          </div>
+          <!-- Faculty Credits Roll (2 Columns) -->
+          <div class="mt-space-2xl w-full max-w-xl">
+            <span
+              class="font-mono text-xs uppercase tracking-widest text-white/40 block mb-4 text-center"
+            >
+              In Eternal Gratitude to Our Mentors
+            </span>
+            <div
+              class="grid grid-cols-2 gap-y-2.5 gap-x-6 text-left font-mono text-xs sm:text-sm text-white/80"
+            >
+              <div class="flex items-center gap-2">
+                <span class="text-primary-fixed">•</span>
+                <span>Dr. Ashwini Parab</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <span class="text-primary-fixed">•</span>
+                <span>Ms. Shruti Baikar</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <span class="text-primary-fixed">•</span>
+                <span>Ms. Kadambari Samdure</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <span class="text-primary-fixed">•</span>
+                <span>Mr. Prathamesh Upkar</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <span class="text-primary-fixed">•</span>
+                <span>Ms. Archana Patil</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <span class="text-primary-fixed">•</span>
+                <span>Mr. Ninad Deshpande</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <span class="text-primary-fixed">•</span>
+                <span>Mr. Krishna Pandit</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <span class="text-primary-fixed">•</span>
+                <span>Dr. Roshini U.</span>
+              </div>
+            </div>
+            <!-- Signing Cohort Stamp -->
+            <div
+              class="mt-space-2xl pt-6 border-t border-white/10 flex flex-col items-center"
+            >
+              <span
+                class="font-mono text-xs uppercase tracking-widest text-primary-fixed font-bold"
+                >Signed with Pride &amp; Reverence by</span
+              >
+              <span class="font-headline-sm text-2xl text-white font-serif mt-1"
+                >The Students of SYB.Sc.IT</span
+              >
+              <span class="font-mono text-xs text-white/50 mt-1"
+                >L-402 Lab Classmates • Academic Cohort 2026–2027</span
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- ========================================================================= -->
+    <!-- FOOTER -->
+    <!-- ========================================================================= -->
+    <footer
+      class="w-full bg-surface-container-low py-space-2xl border-t border-surface-container"
+    >
+      <div class="max-w-[1240px] mx-auto px-margin-mobile lg:px-margin-desktop">
+        <div
+          class="flex flex-col md:flex-row items-center justify-between gap-4 text-center md:text-left"
+        >
+          <div class="flex flex-col gap-1">
+            <span class="font-headline-sm text-lg text-on-surface font-semibold"
+              >Department of Information Technology</span
+            >
+            <span class="font-annotation-script text-on-surface-variant italic"
+              >Dedicated with deepest reverence by the SYB.Sc.IT Cohort
+              (2026–2027)</span
+            >
+          </div>
+          <div class="flex flex-col items-center md:items-end gap-1">
+            <span class="font-mono text-xs uppercase text-primary font-bold"
+              >Teachers' Day Tribute Edition</span
+            >
+            <span class="font-body-sm text-xs text-on-surface-variant"
+              >“What we code today stands on the logic you instilled
+              yesterday.”</span
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- ========================================================================= -->
+    <!-- COMPLETE JAVASCRIPT CONTROLLER (Compact, Self-Contained) -->
+    <!-- ========================================================================= -->
+    <script>
+      // -------------------------------------------------------------------------
+      // 1. Reading Progress Bar & Scroll Tracker (requestAnimationFrame debounced)
+      // -------------------------------------------------------------------------
+      let scrollTicking = false;
+      function updateProgressBar() {
+        const winScroll =
+          document.documentElement.scrollTop || document.body.scrollTop;
+        const height =
+          document.documentElement.scrollHeight -
+          document.documentElement.clientHeight;
+        const scrolled = height > 0 ? (winScroll / height) * 100 : 0;
+        const bar = document.getElementById("scroll-progress-bar");
+        if (bar) {
+          bar.style.width = Math.min(100, Math.max(0, scrolled)) + "%";
+          bar.setAttribute("aria-valuenow", Math.round(scrolled));
+        }
+        scrollTicking = false;
+      }
+
+      window.addEventListener(
+        "scroll",
+        () => {
+          if (!scrollTicking) {
+            window.requestAnimationFrame(updateProgressBar);
+            scrollTicking = true;
+          }
+        },
+        { passive: true },
+      );
+
+      // -------------------------------------------------------------------------
+      // 2. Typewriter Effect in Hero (Respects prefers-reduced-motion)
+      // -------------------------------------------------------------------------
+      const textToType =
+        "A heartfelt chronicle penned by SYB.Sc.IT, Academic Year 2026–27.";
+      let typeIdx = 0;
+      function runTypewriter() {
+        const target = document.getElementById("typewriter-text");
+        if (!target) return;
+        const prefersReducedMotion = window.matchMedia(
+          "(prefers-reduced-motion: reduce)",
+        ).matches;
+        if (prefersReducedMotion) {
+          target.textContent = textToType;
+          return;
+        }
+        if (typeIdx < textToType.length) {
+          target.textContent += textToType.charAt(typeIdx);
+          typeIdx++;
+          setTimeout(runTypewriter, 45);
+        }
+      }
+
+      // -------------------------------------------------------------------------
+      // 3. Scroll-Triggered Reveals via IntersectionObserver
+      // -------------------------------------------------------------------------
+      function initScrollReveals() {
+        const revealElements = document.querySelectorAll(".reveal-on-scroll");
+        const prefersReducedMotion = window.matchMedia(
+          "(prefers-reduced-motion: reduce)",
+        ).matches;
+
+        if (prefersReducedMotion || !("IntersectionObserver" in window)) {
+          revealElements.forEach((el) => el.classList.add("is-revealed"));
+          return;
+        }
+
+        const observer = new IntersectionObserver(
+          (entries, obs) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("is-revealed");
+                obs.unobserve(entry.target);
+              }
+            });
+          },
+          {
+            threshold: 0.1,
+            rootMargin: "0px 0px -40px 0px",
+          },
+        );
+
+        revealElements.forEach((el) => observer.observe(el));
+      }
+
+      // -------------------------------------------------------------------------
+      // 4. Timetable 3D Staggered Flip & Keyboard Parity
+      // -------------------------------------------------------------------------
+      let timetableAllFlipped = false;
+
+      function flipSingleCard(card) {
+        if (!card) return;
+        const inner = card.querySelector(".timetable-inner");
+        if (inner) {
+          inner.classList.toggle("rotate-y-180");
+          const isFlipped = inner.classList.contains("rotate-y-180");
+          card.setAttribute("aria-expanded", isFlipped ? "true" : "false");
+        }
+      }
+
+      function toggleAllScheduleCards() {
+        timetableAllFlipped = !timetableAllFlipped;
+        const cards = document.querySelectorAll(".timetable-card");
+        cards.forEach((card, idx) => {
+          const inner = card.querySelector(".timetable-inner");
+          if (!inner) return;
+          setTimeout(() => {
+            if (timetableAllFlipped) {
+              inner.classList.add("rotate-y-180");
+              card.setAttribute("aria-expanded", "true");
+            } else {
+              inner.classList.remove("rotate-y-180");
+              card.setAttribute("aria-expanded", "false");
+            }
+          }, idx * 60);
+        });
+
+        const label = document.getElementById("flip-btn-label");
+        const icon = document.getElementById("flip-icon");
+        const btn = document.getElementById("timetable-flip-btn");
+        if (label) {
+          label.textContent = timetableAllFlipped
+            ? "Show Class Schedule"
+            : "Flip All: Meet Our 8 Mentors";
+        }
+        if (icon) {
+          icon.style.transform = timetableAllFlipped
+            ? "rotate(180deg)"
+            : "rotate(0deg)";
+        }
+        if (btn) {
+          btn.setAttribute(
+            "aria-expanded",
+            timetableAllFlipped ? "true" : "false",
+          );
+        }
+      }
+
+      function initTimetableCardsA11y() {
+        document.querySelectorAll(".timetable-card").forEach((card) => {
+          card.setAttribute("tabindex", "0");
+          card.setAttribute("role", "button");
+          card.setAttribute(
+            "aria-label",
+            "Flip schedule card to reveal mentor",
+          );
+          card.setAttribute("aria-expanded", "false");
+          card.addEventListener("keydown", (e) => {
+            if (e.key === "Enter" || e.key === " ") {
+              e.preventDefault();
+              flipSingleCard(card);
+            }
+          });
+        });
+      }
+
+      // -------------------------------------------------------------------------
+      // 5. Teacher Cards Hardware-Accelerated Flip & Interaction
+      // -------------------------------------------------------------------------
+      function flipMentorCard(id, event) {
+        if (event) {
+          event.stopPropagation();
+        }
+        const flipper = document.getElementById(`mentor-card-${id}`);
+        if (flipper) {
+          flipper.classList.toggle("rotate-y-180");
+          const isFlipped = flipper.classList.contains("rotate-y-180");
+          const wrapper = flipper.closest(".polaroid-card-wrap");
+          if (wrapper) {
+            wrapper.setAttribute("aria-expanded", isFlipped ? "true" : "false");
+          }
+        }
+      }
+
+      // -------------------------------------------------------------------------
+      // 6. Sticky Notes Modal
+      // -------------------------------------------------------------------------
+      const stickyData = {
+        1: {
+          name: "Dr. Ashwini Parab",
+          text: "Thank you for not laughing when my code crashed the interpreter on line 2! You showed us that being a real programmer is less about never having bugs and all about having the patience to trace them line by line with clear logic.",
+        },
+        2: {
+          name: "Ms. Shruti Baikar",
+          text: "Information Retrieval looked like a matrix of cold vector formulas until you mapped it out. Thank you for never dismissing our redundant questions after class and always greeting our curiosity with a gentle smile.",
+        },
+        3: {
+          name: "Ms. Kadambari Samdure",
+          text: "You made raw datasets feel alive. Every scatterplot became a story of human patterns. Thank you for treating every single student as a unique data point deserving individualized attention and encouragement.",
+        },
+        4: {
+          name: "Mr. Prathamesh Upkar",
+          text: "Calculus and discrete math were terrifying on paper, but your systematic greenboard derivations made miracles look ordinary. We owe our logical backbone to your steady chalk lines.",
+        },
+        5: {
+          name: "Ms. Archana Patil",
+          text: "From linked lists to balanced BSTs, you held our hand across every segmentation fault. Thank you for never letting any student fall out of scope or lose confidence!",
+        },
+        6: {
+          name: "Mr. Ninad Deshpande",
+          text: "Operating Systems could easily have been dry, but your humor and analogies with everyday chaos made process scheduling click like clockwork. Sir, you are our true kernel daemon!",
+        },
+        7: {
+          name: "Mr. Krishna Pandit",
+          text: "In a curriculum driven by cold machine syntax, your Hindi lectures reminded us of warmth, poetry, and the beauty of heartfelt human conversation. कोटिशः धन्यवाद सर।",
+        },
+        8: {
+          name: "Dr. Roshini U.",
+          text: "Financial Literacy was not just a subject for credit marks—it was genuine preparation for the adult world ahead. Thank you for investing wisdom with infinite compounding interest in our lives.",
+        },
+      };
+
+      let activeStickyId = null;
+      let lastFocusedElement = null;
+
+      function openStickyModal(id) {
+        activeStickyId = id;
+        lastFocusedElement = document.activeElement;
+        const data = stickyData[id];
+        if (!data) return;
+
+        const nameEl = document.getElementById("modal-teacher-name");
+        const bodyEl = document.getElementById("modal-body-text");
+        if (nameEl) nameEl.innerText = data.name;
+        if (bodyEl) bodyEl.innerText = `“${data.text}”`;
+
+        const modal = document.getElementById("sticky-modal");
+        if (modal) {
+          modal.classList.remove("hidden");
+          modal.classList.add("flex");
+          modal.setAttribute("aria-hidden", "false");
+          document.body.style.overflow = "hidden"; // Prevent background scrolling
+          const closeBtn = modal.querySelector(
+            "button[aria-label='Close modal']",
+          );
+          if (closeBtn) closeBtn.focus();
+        }
+      }
+
+      function closeStickyModal() {
+        const modal = document.getElementById("sticky-modal");
+        if (modal) {
+          modal.classList.add("hidden");
+          modal.classList.remove("flex");
+          modal.setAttribute("aria-hidden", "true");
+        }
+        document.body.style.overflow = ""; // Restore background scrolling
+        if (
+          lastFocusedElement &&
+          typeof lastFocusedElement.focus === "function"
+        ) {
+          lastFocusedElement.focus();
+        }
+        activeStickyId = null;
+      }
+
+      function initStickyNotesA11y() {
+        const modal = document.getElementById("sticky-modal");
+        if (modal) {
+          modal.addEventListener("click", function (e) {
+            if (e.target === this) closeStickyModal();
+          });
+        }
+
+        // Global Escape key listener for modal
+        document.addEventListener("keydown", (e) => {
+          if (e.key === "Escape" && activeStickyId) {
+            closeStickyModal();
+          }
+        });
+
+        // Sticky notes keyboard parity
+        document.querySelectorAll(".sticky-note-card").forEach((card) => {
+          card.addEventListener("keydown", (e) => {
+            if (e.key === "Enter" || e.key === " ") {
+              e.preventDefault();
+              card.click();
+            }
+          });
+        });
+      }
+
+      // -------------------------------------------------------------------------
+      // 7. Twinkling Dust Particles (Night Canvas)
+      // -------------------------------------------------------------------------
+      function initNightCanvas() {
+        const canvas = document.getElementById("twinkle-canvas");
+        if (!canvas) return;
+        const ctx = canvas.getContext("2d");
+        if (!ctx) return;
+
+        let w, h;
+        const particles = [];
+        const count = 55;
+        let animationFrameId = null;
+
+        function resize() {
+          if (!canvas.parentElement) return;
+          w = canvas.width = canvas.parentElement.offsetWidth;
+          h = canvas.height = canvas.parentElement.offsetHeight;
+        }
+        resize();
+        window.addEventListener("resize", resize, { passive: true });
+
+        for (let i = 0; i < count; i++) {
+          particles.push({
+            x: Math.random() * (w || 800),
+            y: Math.random() * (h || 600),
+            r: Math.random() * 1.6 + 0.4,
+            alpha: Math.random() * 0.7 + 0.2,
+            speed: Math.random() * 0.3 + 0.1,
+            dx: (Math.random() - 0.5) * 0.2,
+          });
+        }
+
+        function draw() {
+          ctx.clearRect(0, 0, w, h);
+          particles.forEach((p) => {
+            ctx.beginPath();
+            ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+            ctx.fillStyle = `rgba(255, 230, 200, ${p.alpha})`;
+            ctx.fill();
+
+            p.y -= p.speed;
+            p.x += p.dx;
+            if (p.y < 0) {
+              p.y = h;
+              p.x = Math.random() * w;
+            }
+            if (p.x < 0) p.x = w;
+            if (p.x > w) p.x = 0;
+          });
+          animationFrameId = requestAnimationFrame(draw);
+        }
+
+        // Only run animation if user doesn't prefer reduced motion
+        const prefersReducedMotion = window.matchMedia(
+          "(prefers-reduced-motion: reduce)",
+        ).matches;
+        if (!prefersReducedMotion) {
+          draw();
+        }
+      }
+
+      // -------------------------------------------------------------------------
+      // 8. Web Audio API: Mellow Lofi Tape Synth & Vinyl Crackle
+      // -------------------------------------------------------------------------
+      let audioCtx = null;
+      let isLofiPlaying = false;
+      let padOscillators = [];
+      let vinylNode = null;
+      let masterGain = null;
+
+      function initAudio() {
+        if (!audioCtx) {
+          audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+        }
+        if (audioCtx.state === "suspended") {
+          audioCtx.resume();
+        }
+      }
+
+      function toggleLofiAudio() {
+        initAudio();
+        const soundwave = document.getElementById("soundwave");
+        const iconContainer = document.getElementById("lofi-icon-container");
+        const label = document.getElementById("lofi-status-label");
+        const toggleBtn = document.getElementById("lofi-toggle-btn");
+
+        if (!isLofiPlaying) {
+          // Start Sound
+          startLofiSound();
+          isLofiPlaying = true;
+          if (soundwave) {
+            soundwave.classList.remove("hidden");
+            soundwave.classList.add("flex");
+          }
+          if (iconContainer) iconContainer.classList.add("hidden");
+          if (label) {
+            label.textContent = "Playing...";
+            label.classList.add("text-primary");
+          }
+          if (toggleBtn) toggleBtn.setAttribute("aria-pressed", "true");
+        } else {
+          // Stop Sound
+          stopLofiSound();
+          isLofiPlaying = false;
+          if (soundwave) {
+            soundwave.classList.add("hidden");
+            soundwave.classList.remove("flex");
+          }
+          if (iconContainer) iconContainer.classList.remove("hidden");
+          if (label) {
+            label.textContent = "Lofi Tape";
+            label.classList.remove("text-primary");
+          }
+          if (toggleBtn) toggleBtn.setAttribute("aria-pressed", "false");
+        }
+      }
+
+      function startLofiSound() {
+        if (!audioCtx) return;
+        masterGain = audioCtx.createGain();
+        masterGain.gain.setValueAtTime(0.08, audioCtx.currentTime);
+        masterGain.connect(audioCtx.destination);
+
+        // Warm peaceful chords: Fmaj9 / Cmaj7 (F3, A3, C4, E4)
+        const chordFreqs = [174.61, 220.0, 261.63, 329.63];
+        padOscillators = chordFreqs.map((freq) => {
+          const osc = audioCtx.createOscillator();
+          const gain = audioCtx.createGain();
+          osc.type = "sine";
+          osc.frequency.setValueAtTime(freq, audioCtx.currentTime);
+
+          // Lowpass filter for warm tape saturation
+          const filter = audioCtx.createBiquadFilter();
+          filter.type = "lowpass";
+          filter.frequency.setValueAtTime(600, audioCtx.currentTime);
+
+          gain.gain.setValueAtTime(0.04, audioCtx.currentTime);
+          osc.connect(filter);
+          filter.connect(gain);
+          gain.connect(masterGain);
+          osc.start();
+          return { osc, gain };
+        });
+
+        // Subtle simulated vinyl crackle buffer
+        const bufferSize = Math.floor(audioCtx.sampleRate * 2);
+        const buffer = audioCtx.createBuffer(
+          1,
+          bufferSize,
+          audioCtx.sampleRate,
+        );
+        const output = buffer.getChannelData(0);
+        for (let i = 0; i < bufferSize; i++) {
+          output[i] =
+            Math.random() < 0.008 ? (Math.random() * 2 - 1) * 0.15 : 0;
+        }
+        vinylNode = audioCtx.createBufferSource();
+        vinylNode.buffer = buffer;
+        vinylNode.loop = true;
+        const vinylGain = audioCtx.createGain();
+        vinylGain.gain.setValueAtTime(0.03, audioCtx.currentTime);
+        vinylNode.connect(vinylGain);
+        vinylGain.connect(masterGain);
+        vinylNode.start();
+      }
+
+      function stopLofiSound() {
+        if (masterGain && audioCtx) {
+          masterGain.gain.exponentialRampToValueAtTime(
+            0.0001,
+            audioCtx.currentTime + 0.5,
+          );
+          setTimeout(() => {
+            padOscillators.forEach((p) => {
+              try {
+                p.osc.stop();
+              } catch (e) {}
+            });
+            if (vinylNode) {
+              try {
+                vinylNode.stop();
+              } catch (e) {}
+            }
+            padOscillators = [];
+            vinylNode = null;
+          }, 500);
+        }
+      }
+
+      // -------------------------------------------------------------------------
+      // 9. Master Initialization on DOMContentLoaded
+      // -------------------------------------------------------------------------
+      window.addEventListener("DOMContentLoaded", () => {
+        setTimeout(runTypewriter, 600);
+        initScrollReveals();
+        initTimetableCardsA11y();
+        initTeacherCardsTilt();
+        initStickyNotesA11y();
+        initNightCanvas();
+      });
+    </script>
+  </body>
+</html>
